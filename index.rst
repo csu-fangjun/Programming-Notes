@@ -17,3 +17,4 @@ Refer to :ref:`sphinx_install` page for how to build this website.
    :caption: Table of Contents
 
    sphinx/index
+   ssh/index

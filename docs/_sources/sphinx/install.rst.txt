@@ -17,8 +17,9 @@ Second, install ``sphinx`` via pip.
 
 .. code-block:: sh
 
-    pip install -U sphinx
-    pip install -U sphinx_rtd_theme
+    pip install sphinx
+    pip install sphinx_rtd_theme
+
 
 To check that ``sphinx`` is installed successfully, run
 
