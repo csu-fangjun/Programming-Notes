@@ -6,13 +6,14 @@
 Fangjun's Note on Programming
 =============================
 
-.. toctree::
-   :maxdepth: 1
+This site contains my programming notes. It is generated using
+`sphinx <https://www.sphinx-doc.org/en/master/>`_ with
+`readthedocs theme <https://sphinx-rtd-theme.readthedocs.io/en/stable/>`_.
 
-   introduction
+Refer to :ref:`sphinx_install` page for how to build this website.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Notes
+   :caption: Table of Contents
 
    sphinx/index
