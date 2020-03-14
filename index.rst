@@ -13,6 +13,6 @@ Fangjun's Note on Programming
 
 .. toctree::
    :maxdepth: 2
-   :caption: Sphinx
+   :caption: Notes
 
-   sphinx/install
+   sphinx/index

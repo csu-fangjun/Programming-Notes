@@ -18,8 +18,8 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'Notes'
-copyright = '2020, fangjun'
+project = 'Programming Notes'
+copyright = '2020, <fangjun dot kuang at gmail dot com>'
 author = 'fangjun'
 
 # The full version, including alpha/beta/rc tags
@@ -65,3 +65,7 @@ pygments_style = 'sphinx'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 smartquotes = False
 html_show_sourcelink = True
+
+html_theme_options = {
+    'collapse_navigation': False,
+}

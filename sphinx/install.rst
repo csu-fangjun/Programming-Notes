@@ -88,3 +88,14 @@ The generated pages are inside the ``docs`` directory.
 
 Sixth, create a repo on Github and push this project
 to the created repo.
+
+Finally, go to the settings tab of the repository
+and select ``master branch /docs folder`` to publish
+it as GitHub pages. The following is a screenshot.
+
+.. figure:: image/github-repo-setup.png
+    :alt: Setup GitHub Pages
+    :align: center
+    :figwidth: 600px
+
+    Setup Github Pages
