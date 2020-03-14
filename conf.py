@@ -68,4 +68,5 @@ html_show_sourcelink = True
 
 html_theme_options = {
     'collapse_navigation': False,
+    'analytics_id': 'UA-160691436-1',
 }
