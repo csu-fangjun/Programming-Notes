@@ -19,6 +19,8 @@ Second, install ``sphinx`` via pip.
 
     pip install sphinx
     pip install sphinx_rtd_theme
+    pip install sphinxcontrib-bibtex
+
 
 
 To check that ``sphinx`` is installed successfully, run
@@ -51,15 +53,19 @@ Edit ``conf.py``
 
 - For the ``extensions`` list, add
 
-.. code-block:: sh
+.. code-block:: python
 
-    sphinx.ext.autodoc
-    sphinx.ext.autosummary
-    sphinx.ext.mathjax
-    sphinx.ext.napoleon
-    sphinx.ext.todo
-    sphinx.ext.viewcode
-    sphinx.ext.githubpages
+    extensions = [
+        'sphinx.ext.autodoc',
+        'sphinx.ext.autosummary',
+        'sphinx.ext.githubpages',
+        'sphinx.ext.mathjax',
+        'sphinx.ext.napoleon',
+        'sphinx.ext.todo',
+        'sphinx.ext.viewcode',
+        'sphinxcontrib.bibtex',
+    ]
+
 
 - Change ``html_theme`` to ``sphinx_rtd_theme``
 
