@@ -19,3 +19,4 @@ Refer to :ref:`sphinx_install` page for how to build this website.
    sphinx/index
    ssh/index
    os/index
+   pybind/index

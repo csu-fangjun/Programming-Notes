@@ -11,6 +11,16 @@ Heading style:
   - subsubsections: ``^``
   - paragraphs: ``"``
 
+
+URLs:
+
+- `Link to Google <https://google.com>`_
+- `Another link to Google`_
+
+.. _Another link to Google: https://google.com
+
+
+
 References
 ----------
 

@@ -1,0 +1,26 @@
+package(default_visibility = ["//visibility:public"])
+
+# Note that the name has to be `hello.so`
+# since the module name is `hello`.
+cc_binary(
+    name = "hello.so",
+    srcs = ["hello.cc"],
+    linkshared = 1,
+    linkstatic = 1,
+    deps = [
+        "@pybind11",
+        "@python_headers",
+    ],
+)
+
+py_binary(
+    name = "test",
+    srcs = ["test.py"],
+    data = ["hello.so"],
+)
+
+py_runtime(
+    name = "python3",
+    interpreter_path = "/usr/bin/python3",
+    files=[],
+)
