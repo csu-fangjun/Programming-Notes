@@ -8,7 +8,7 @@ Generate keys
 
 Use ``ssh-keygen -t rsa`` to generate a pair of keys.
 
-.. code-block::
+.. code-block:: console
 
     $ ssh-keygen -t rsa
 

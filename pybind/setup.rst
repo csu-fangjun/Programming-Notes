@@ -34,7 +34,9 @@ To install the package, use
 
     python setup.py build
 
-which shows::
+which shows:
+
+.. code-block:: bash
 
     running install
     running bdist_egg

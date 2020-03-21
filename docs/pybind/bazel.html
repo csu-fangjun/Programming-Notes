@@ -25,6 +25,8 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,6 +35,7 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="Build with setup.py" href="setup.html" /> 
@@ -86,6 +89,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../sphinx/rst_basics.html">reStructuredText Basics</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../sphinx/rst_basics.html#references">References</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../sphinx/rst_basics.html#footnotes">Footnotes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/exhale.html">Exhale</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sphinx/exhale.html#install-exhale">Install Exhale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sphinx/exhale.html#configure-sphinx">Configure Sphinx</a></li>
 </ul>
 </li>
 </ul>
@@ -194,11 +202,11 @@ chmod +x bazel-2.2.0-installer-linux-x86_64.sh
 </pre></div>
 </div>
 <p>After installation, <code class="docutils literal notranslate"><span class="pre">bazel</span> <span class="pre">version</span></code> should print the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Build</span> <span class="n">label</span><span class="p">:</span> <span class="mf">2.2</span><span class="o">.</span><span class="mi">0</span>
-<span class="n">Build</span> <span class="n">target</span><span class="p">:</span> <span class="n">bazel</span><span class="o">-</span><span class="n">out</span><span class="o">/</span><span class="n">k8</span><span class="o">-</span><span class="n">opt</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">com</span><span class="o">/</span><span class="n">google</span><span class="o">/</span><span class="n">devtools</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">bazel</span><span class="o">/</span><span class="n">BazelServer_deploy</span><span class="o">.</span><span class="n">jar</span>
-<span class="n">Build</span> <span class="n">time</span><span class="p">:</span> <span class="n">Tue</span> <span class="n">Mar</span> <span class="mi">3</span> <span class="mi">09</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">12</span> <span class="mi">2020</span> <span class="p">(</span><span class="mi">1583227572</span><span class="p">)</span>
-<span class="n">Build</span> <span class="n">timestamp</span><span class="p">:</span> <span class="mi">1583227572</span>
-<span class="n">Build</span> <span class="n">timestamp</span> <span class="k">as</span> <span class="nb">int</span><span class="p">:</span> <span class="mi">1583227572</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Build</span> <span class="nl">label</span><span class="p">:</span> <span class="mf">2.2.0</span>
+<span class="n">Build</span> <span class="nl">target</span><span class="p">:</span> <span class="n">bazel</span><span class="o">-</span><span class="n">out</span><span class="o">/</span><span class="n">k8</span><span class="o">-</span><span class="n">opt</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">com</span><span class="o">/</span><span class="n">google</span><span class="o">/</span><span class="n">devtools</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">bazel</span><span class="o">/</span><span class="n">BazelServer_deploy</span><span class="p">.</span><span class="n">jar</span>
+<span class="n">Build</span> <span class="nl">time</span><span class="p">:</span> <span class="n">Tue</span> <span class="n">Mar</span> <span class="mi">3</span> <span class="mi">09</span><span class="o">:</span><span class="mi">26</span><span class="o">:</span><span class="mi">12</span> <span class="mi">2020</span> <span class="p">(</span><span class="mi">1583227572</span><span class="p">)</span>
+<span class="n">Build</span> <span class="nl">timestamp</span><span class="p">:</span> <span class="mi">1583227572</span>
+<span class="n">Build</span> <span class="n">timestamp</span> <span class="n">as</span> <span class="kt">int</span><span class="o">:</span> <span class="mi">1583227572</span>
 </pre></div>
 </div>
 <p>To compile the following code,</p>

@@ -20,3 +20,4 @@ Refer to :ref:`sphinx_install` page for how to build this website.
    ssh/index
    os/index
    pybind/index
+   cmake/index

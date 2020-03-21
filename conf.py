@@ -39,6 +39,8 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.viewcode',
     'sphinxcontrib.bibtex',
+    'breathe',
+    'exhale',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -80,3 +82,37 @@ html_context = {
     "github_version": "master",  # Version
     "conf_py_path": "/",  # Path in the checkout to the docs root
 }
+
+# ==============================
+# Setup for exhale started
+# ------------------------------
+# refer to https://exhale.readthedocs.io/en/latest/usage.html#quickstart-guide
+
+# Setup the breathe extension
+breathe_projects = {"Notes": "./doxyoutput/xml"}
+breathe_default_project = "Notes"
+
+# Setup the exhale extension
+exhale_args = {
+    # These arguments are required
+    "containmentFolder": "./example_exhale_api",
+    "rootFileName": "library_root.rst",
+    "rootFileTitle": "Library API",
+    "doxygenStripFromPath": "..",
+    # Suggested optional arguments
+    "createTreeView": True,
+    # TIP: if using the sphinx-bootstrap-theme, you need
+    # "treeViewIsBootstrap": True,
+    "exhaleExecutesDoxygen": True,
+    "exhaleDoxygenStdin": "INPUT = ./sphinx/code"
+}
+
+# Tell sphinx what the primary language being documented is.
+primary_domain = 'cpp'
+
+# Tell sphinx what the pygments highlight language should be.
+highlight_language = 'cpp'
+
+# ==============================
+# Setup for exhale ended
+# ------------------------------

@@ -13,3 +13,4 @@ and ``Bazel``.
     make
     setup
     bazel
+    cmake

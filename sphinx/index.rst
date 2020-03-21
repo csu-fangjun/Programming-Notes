@@ -10,4 +10,5 @@ with Sphinx.
 
     install
     rst_basics
+    exhale
 
