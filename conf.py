@@ -71,3 +71,12 @@ html_theme_options = {
     'collapse_navigation': False,
     'analytics_id': 'UA-160691436-1',
 }
+
+# refer to https://docs.readthedocs.io/en/latest/guides/vcs.html#github
+html_context = {
+    "display_github": True,  # Integrate GitHub
+    "github_user": "csu-fangjun",  # Username
+    "github_repo": "Programming-Notes",  # Repo name
+    "github_version": "master",  # Version
+    "conf_py_path": "/",  # Path in the checkout to the docs root
+}
