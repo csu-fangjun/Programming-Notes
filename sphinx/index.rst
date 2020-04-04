@@ -9,6 +9,8 @@ with Sphinx.
 .. toctree::
 
     install
+    useful_extensions
+    open-sources
     rst_basics
     exhale
 

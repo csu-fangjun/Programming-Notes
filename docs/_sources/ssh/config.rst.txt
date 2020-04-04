@@ -95,3 +95,23 @@ Configuration for Git
     url = git@github2:user2/repo.git
     fetch = +refs/heads/*:refs/remotes/foobar/*
 
+
+Useful Options
+--------------
+
+- Disable host key checking::
+
+  StrictHostKeyChecking=no
+
+- Force password only login::
+
+  PreferredAuthentications=password
+  PubkeyAuthentication=no
+
+- Force public key login only on the server side, changing
+``/etc/ssh/sshd_config``::
+
+  PasswordAuthentication no
+  UsePAM no
+
+

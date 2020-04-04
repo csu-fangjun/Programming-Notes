@@ -25,9 +25,12 @@ References
 ----------
 
 - Read the Docs Sphinx Theme [1]_
+- `reStructuredText Primer`_
+
 
 
 Footnotes
 ---------
 
 .. [1] `Read the Docs Sphinx Theme <https://sphinx-rtd-theme.readthedocs.io/en/stable/index.html>`_
+.. _reStructuredText Primer: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html

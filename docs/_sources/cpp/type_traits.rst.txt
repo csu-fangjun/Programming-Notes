@@ -1,0 +1,17 @@
+
+Type Traits
+===========
+
+add_rvalue_reference
+--------------------
+
+.. literalinclude:: ./code/type_traits/add_rvalue_reference.cc
+   :caption: add_rvalue_reference.cc
+   :language: cpp
+   :linenos:
+
+.. WARNING::
+
+  The return type of ``add_rvalue_reference`` is ``T&&``,
+  which can be either a left value reference or right value
+  reference. The name ``add_rvalue_reference`` is misleading!

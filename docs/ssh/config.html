@@ -87,6 +87,17 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sphinx/install.html">Environment Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/useful_extensions.html">Useful Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sphinx/useful_extensions.html#sphinx-ext-extlinks">sphinx.ext.extlinks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/useful_extensions.html#sphinx-ext-napoleon">sphinx.ext.napoleon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/useful_extensions.html#sphinx-ext-todo">sphinx.ext.todo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/useful_extensions.html#sphinx-ext-autodoc">sphinx.ext.autodoc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/open-sources.html">Open Sources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sphinx/open-sources.html#virtualenv">virtualenv</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../sphinx/rst_basics.html">reStructuredText Basics</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../sphinx/rst_basics.html#references">References</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../sphinx/rst_basics.html#footnotes">Footnotes</a></li>
@@ -94,7 +105,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../sphinx/exhale.html">Exhale</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../sphinx/exhale.html#install-exhale">Install Exhale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../sphinx/exhale.html#configure-sphinx">Configure Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sphinx/exhale.html#configure-sphinx">Configure Sphinx</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../example_exhale_api/library_root.html">Library API</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -107,6 +121,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#configuration-for-git">Configuration for Git</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#useful-options">Useful Options</a></li>
 </ul>
 </li>
 </ul>
@@ -120,6 +135,31 @@
 <li class="toctree-l2"><a class="reference internal" href="../pybind/make.html">Build with Make</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pybind/setup.html">Build with setup.py</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pybind/bazel.html">Build with Bazel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pybind/cmake.html">Build with CMake</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pybind/cmake.html#install-cmake">Install CMake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pybind/cmake.html#build-example">Build Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmake/index.html">CMake</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmake/basics.html">Basics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python/venv.html">Virtual Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/style_guide.html">Python Style Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../python/style_guide.html#faqs">FAQs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../python/the_with_statement.html">The <code class="docutils literal notranslate"><span class="pre">with</span></code> Statement</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../python/the_with_statement.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bash/index.html">Bash</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../bash/basics.html">Basics</a></li>
 </ul>
 </li>
 </ul>
@@ -278,6 +318,24 @@ different keys for different accounts or organizations.</p>
 </pre></div>
 </div>
 </div>
+</div>
+</div>
+<div class="section" id="useful-options">
+<h2>Useful Options<a class="headerlink" href="#useful-options" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Disable host key checking:</p>
+<p>StrictHostKeyChecking=no</p>
+</li>
+<li><p>Force password only login:</p>
+<p>PreferredAuthentications=password
+PubkeyAuthentication=no</p>
+</li>
+<li><p>Force public key login only on the server side, changing</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">/etc/ssh/sshd_config</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PasswordAuthentication</span> <span class="n">no</span>
+<span class="n">UsePAM</span> <span class="n">no</span>
+</pre></div>
 </div>
 </div>
 </div>

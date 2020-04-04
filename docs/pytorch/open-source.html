@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Open Source Project &mdash; Programming Notes v0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Kaldi" href="../kaldi/index.html" />
+    <link rel="prev" title="PyTorch" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Programming Notes
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/install.html">Environment Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/useful_extensions.html">Useful Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sphinx/useful_extensions.html#sphinx-ext-extlinks">sphinx.ext.extlinks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/useful_extensions.html#sphinx-ext-napoleon">sphinx.ext.napoleon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/useful_extensions.html#sphinx-ext-todo">sphinx.ext.todo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/useful_extensions.html#sphinx-ext-autodoc">sphinx.ext.autodoc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/open-sources.html">Open Sources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sphinx/open-sources.html#virtualenv">virtualenv</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/rst_basics.html">reStructuredText Basics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sphinx/rst_basics.html#references">References</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sphinx/rst_basics.html#footnotes">Footnotes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/exhale.html">Exhale</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sphinx/exhale.html#install-exhale">Install Exhale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sphinx/exhale.html#configure-sphinx">Configure Sphinx</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../example_exhale_api/library_root.html">Library API</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ssh/index.html">Secure Shell (SSH)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ssh/config.html">Passwordless Login</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ssh/config.html#generate-keys">Generate keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ssh/config.html#copy-keys">Copy Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ssh/config.html#edit-ssh-config">Edit .ssh/config</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ssh/config.html#configuration-for-git">Configuration for Git</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ssh/config.html#useful-options">Useful Options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../os/index.html">Operating Systems</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../os/papers.html">Papers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../pybind/index.html">pybind11</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pybind/install.html">Install pybind11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pybind/make.html">Build with Make</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pybind/setup.html">Build with setup.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pybind/bazel.html">Build with Bazel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pybind/cmake.html">Build with CMake</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pybind/cmake.html#install-cmake">Install CMake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pybind/cmake.html#build-example">Build Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmake/index.html">CMake</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmake/basics.html">Basics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python/venv.html">Virtual Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/style_guide.html">Python Style Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../python/style_guide.html#faqs">FAQs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../python/the_with_statement.html">The <code class="docutils literal notranslate"><span class="pre">with</span></code> Statement</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../python/the_with_statement.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bash/index.html">Bash</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../bash/basics.html">Basics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bash/basics.html#get-the-current-directory-of-the-script">Get the current directory of the script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bash/basics.html#date"><code class="docutils literal notranslate"><span class="pre">date</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bash/basics.html#array"><code class="docutils literal notranslate"><span class="pre">array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bash/basics.html#block-comment">Block Comment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">PyTorch</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Open Source Project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kaldi/index.html">Kaldi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../kaldi/transition_model.html">Transition Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../kaldi/transition_model.html#basic-terminology">Basic Terminology</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Programming Notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">PyTorch</a> &raquo;</li>
+        
+      <li>Open Source Project</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/csu-fangjun/Programming-Notes/blob/master/pytorch/open-source.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="open-source-project">
+<h1>Open Source Project<a class="headerlink" href="#open-source-project" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p><a class="reference external" href="https://github.com/mlperf/training/tree/master/rnn_speech_recognition/pytorch">https://github.com/mlperf/training/tree/master/rnn_speech_recognition/pytorch</a></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/mlperf/training/blob/master/rnn_speech_recognition/pytorch/tb_logger.py">tb_logger.py</a></p>
+<p>Tensorboard wrapper</p>
+</li>
+<li><p><a class="reference external" href="https://github.com/mlperf/training/blob/master/rnn_speech_recognition/pytorch/preprocessing.py">preprocessing.py</a></p>
+<p>Spectrogram</p>
+</li>
+<li><p><a class="reference external" href="https://github.com/mlperf/training/blob/master/rnn_speech_recognition/pytorch/optimizers.py">optimizers.py</a></p>
+<p>How to create a customized optimizer</p>
+</li>
+<li><p><a class="reference external" href="https://github.com/mlperf/training/blob/master/rnn_speech_recognition/pytorch/model_rnnt.py">model_rnnt.py</a></p>
+<p>How to define a customized model</p>
+</li>
+<li><p><a class="reference external" href="https://github.com/mlperf/training/blob/master/rnn_speech_recognition/pytorch/loss.py">loss.py</a></p>
+<p>How to wrap rnnt loss</p>
+</li>
+<li><p><a class="reference external" href="https://github.com/mlperf/training/blob/master/rnn_speech_recognition/pytorch/metrics.py">metrics.py</a></p>
+<p>Code for WER</p>
+</li>
+<li><p><a class="reference external" href="https://github.com/mlperf/training/blob/master/rnn_translator/pytorch/seq2seq/train/lr_scheduler.py">lr_scheduler.py</a></p>
+<p>How to define a customized learning rate scheduler</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../kaldi/index.html" class="btn btn-neutral float-right" title="Kaldi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="PyTorch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, &lt;fangjun dot kuang at gmail dot com&gt;
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-160691436-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

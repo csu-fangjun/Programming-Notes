@@ -13,7 +13,7 @@ This site contains my programming notes. It is generated using
 Refer to :ref:`sphinx_install` page for how to build this website.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Table of Contents
 
    sphinx/index
@@ -21,3 +21,11 @@ Refer to :ref:`sphinx_install` page for how to build this website.
    os/index
    pybind/index
    cmake/index
+   python/index
+   bash/index
+   pytorch/index
+   kaldi/index
+   git/index
+   cpp/index
+   deep_learning/index
+   arm/index
