@@ -95,7 +95,7 @@ To remove an environment:
 It creates delete the directory ``$HOME/software/miniconda3/envs/mypy3``.
 
 Create an Virtual Environment from commandline
--------------------------------------------
+----------------------------------------------
 
 .. code-block::
 

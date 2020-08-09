@@ -12,4 +12,5 @@ Compilers
   makefile
   symbols
   llvm
+  cmake
 

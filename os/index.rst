@@ -6,3 +6,7 @@ Operating Systems
 
     papers
     architecture
+    courses
+    hard_disks
+    environment_setup
+    day0
