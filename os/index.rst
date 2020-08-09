@@ -9,4 +9,5 @@ Operating Systems
     courses
     hard_disks
     environment_setup
+    x86_asm
     day0
