@@ -1,0 +1,16 @@
+# Copyright 2020. All Rights Reserved.
+# Author: fangjun.kuang@gmail.com (Fangjun Kuang)
+
+cc_binary(
+    name = "hello_ruy",
+    srcs = ["hello_ruy.cc"],
+    linkopts = ["-pthread"],  # ruy requires linking to pthread on x86_64
+    deps = ["@ruy//ruy"],
+)
+
+cc_binary(
+    name = "hello_profiler",
+    srcs = ["hello_profiler.cc"],
+    linkopts = ["-pthread"],  # ruy requires linking to pthread on x86_64
+    deps = ["@ruy//ruy/profiler:profiler"],
+)

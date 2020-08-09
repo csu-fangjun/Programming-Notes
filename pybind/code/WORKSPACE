@@ -1,0 +1,22 @@
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+load(":python_repo.bzl", "python_repo")
+
+python_repo(
+    name = "python_headers",
+    python_interpreter = "python3",
+)
+
+http_archive(
+    name = "pybind11",
+    build_file_content = """
+package(default_visibility=["//visibility:public"])
+cc_library(
+    name="pybind11",
+    hdrs=glob(["include/pybind11/*.h", "include/pybind11/detail/*.h"]),
+    includes=["include"],
+)
+""",
+    sha256 = "1eed57bc6863190e35637290f97a20c81cfe4d9090ac0a24f3bbf08f265eb71d",
+    strip_prefix = "pybind11-2.4.3",
+    urls = ["https://github.com/pybind/pybind11/archive/v2.4.3.tar.gz"],
+)

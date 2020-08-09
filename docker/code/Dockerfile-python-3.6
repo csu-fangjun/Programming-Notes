@@ -1,0 +1,25 @@
+# How to build this file
+#
+# docker build -f Dockerfile-python-3.6 -t mypy3.6 .
+#
+FROM ubuntu:18.04
+
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    clang-format-9 \
+    clang-tidy-9 \
+    cmake \
+    git \
+    python3 \
+    python3-dev \
+    vim \
+    && \
+    rm -rf /var/lib/apt/lists/*
+
+
+#set -o vi
+#bind -x '"\C-l": clear'
+#bind '"jk":vi-movement-mode'
+RUN echo "set -o vi" >> ~/.bashrc && \
+    echo "bind -x '\"\C-l\": clear'" >> ~/.bashrc && \
+    echo "bind '\"jk\":vi-movement-mode'" >> ~/.bashrc
