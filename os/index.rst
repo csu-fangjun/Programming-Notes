@@ -10,4 +10,7 @@ Operating Systems
     hard_disks
     environment_setup
     x86_asm
+    shared_libraries
+    system_programming
     day0
+    todo

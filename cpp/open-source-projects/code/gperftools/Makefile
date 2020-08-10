@@ -1,7 +1,13 @@
 
 LDFLAGS := -L/home/fangjunkuang/software/gperftools/lib -ltcmalloc
-main: main.cc
-	$(CXX) -o $@ $^ $(CXXFLAGS)
+LDFLAGS += -Wl,-rpath,/home/fangjunkuang/software/gperftools/lib
+CXXFLAGS := -I/home/fangjunkuang/software/gperftools/include
+CXXFLAGS += -std=c++11
+
+all:
+
+%: %.cc
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
 run: main
 	HEAPPROFILE=a.prof LD_PRELOAD=/home/fangjunkuang/software/gperftools/lib/libtcmalloc.so ./main
@@ -11,4 +17,4 @@ draw:
 
 .PHONY: run draw clean
 clean:
-	$(RM) a.prof.* main
+	$(RM) a.prof.* main tcmalloc_test
