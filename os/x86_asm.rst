@@ -2,7 +2,11 @@
 x86 asm
 ========
 
-To setup the environment for compile x86 asm on 64-bit Ubuntu:
+
+x86 asm on 64-bit
+-----------------
+
+To setup the environment for compiling x86 asm on 64-bit Ubuntu:
 (refer to `<https://denniskubes.com/2017/01/31/compiling-x86-assembly-on-x64-linux/>`_)
 
 .. code-block::
@@ -19,6 +23,32 @@ To setup the environment for compile x86 asm on 64-bit Ubuntu:
 
    gcc -m32 hello_world.s
 
+.. literalinclude:: ./code/x86_asm/hello_world_x64.s
+  :caption: hello_world_x64.s
+  :language: asm
+  :linenos:
+
+.. literalinclude:: ./code/x86_asm/hello_main.s
+  :caption: hello_main.s
+  :language: asm
+  :linenos:
+
+.. literalinclude:: ./code/x86_asm/hello_world.s
+  :caption: hello_world.s
+  :language: asm
+  :linenos:
+
+.. NOTE::
+
+  For ``as`` and ``ld``, the entry point is ``_start`` and we have to call
+  ``exit`` ourselves.
+
+  For ``gcc``, the entry point is ``main``.
+
+
+
+datatype
+--------
 
 .. literalinclude:: ./code/x86_asm/datatype.c
   :caption: datatype.c
@@ -35,10 +65,6 @@ To setup the environment for compile x86 asm on 64-bit Ubuntu:
   :language: makefile
   :linenos:
 
-.. literalinclude:: ./code/x86_asm/hello_world_x64.s
-  :caption: hello_world_x64.s
-  :language: asm
-  :linenos:
 
 References
 ----------
