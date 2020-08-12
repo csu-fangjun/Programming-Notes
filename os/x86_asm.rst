@@ -2,27 +2,22 @@
 x86 asm
 ========
 
-addressing
-----------
+To setup the environment for compile x86 asm on 64-bit Ubuntu:
+(refer to `<https://denniskubes.com/2017/01/31/compiling-x86-assembly-on-x64-linux/>`_)
 
 .. code-block::
 
-  mov %eax, var(,1)     # *(var + 1) = eax
-  move (%ebx), %eax     # eax = *ebx
-  mov -4(%esi), %eax    # eax = *(esi - 4)
-  mov %cl, (%esi, %eax, 1)  # *(esi + eax*1) = cl
-  mov (%esi, %ebx, 4), %edx # edx = *(esi + ebx * 4)
+   sudo dpkg --add-architecture i386
+   sudo apt-get update
+   sudo apt-get dist-upgrade
+   sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
+   sudo apt-get install multiarch-support
+   sudo apt-get install gcc-multilib g++-multilib
 
-  lea (%ebx, %esi, 8), %edi   # edi = ebx + esi * 8
-
-stack
------
 
 .. code-block::
 
-  push %eax   #  esp = esp - 4;  *esp = eax
-  pop %edi    # edi = *esp; esp = esp + 4
-
+   gcc -m32 hello_world.s
 
 
 .. literalinclude:: ./code/x86_asm/datatype.c
@@ -40,7 +35,15 @@ stack
   :language: makefile
   :linenos:
 
+.. literalinclude:: ./code/x86_asm/hello_world_x64.s
+  :caption: hello_world_x64.s
+  :language: asm
+  :linenos:
+
 References
 ----------
 
 - `<http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html>`_
+- x64 Cheat Sheet
+
+   `<https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf>`_
