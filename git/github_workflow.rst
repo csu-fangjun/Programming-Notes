@@ -91,7 +91,7 @@ And use it `<https://help.github.com/en/actions/configuring-and-managing-workflo
         types: [published, created, edited]
 
 **runs-on**
-  .. code-bock::
+  .. code-block::
 
     runs-on: ubuntu-latest
 
