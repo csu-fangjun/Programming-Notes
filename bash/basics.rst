@@ -302,3 +302,9 @@ ffmpeg
 .. code-block::
 
   ffmpeg -hide_banner -i test.ogg test.mp3
+
+- Separate channel
+
+.. code-block::
+
+  ffmpeg -hide_banner -i abc.wav -map_channel 0.0.0 left.wav -map_channel 0.0.1 right.wav

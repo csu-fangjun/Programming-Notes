@@ -1,4 +1,5 @@
 #include <dlfcn.h>
+#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -17,7 +18,14 @@ extern "C" void *malloc(size_t size) {
   char s[] = "malloc called\n";
   write(2, s, sizeof(s));
 
-  return pmalloc(size);
+  void *p = pmalloc(size);
+  // return p;
+  // std::cout << "p: " << p << std::endl;
+  char a[30] = {0};
+  snprintf(a, 30, "p is %p\n\n", p);
+  write(2, a, sizeof(a));
+
+  return p;
 }
 
 extern "C" void free(void *ptr) {
@@ -30,6 +38,10 @@ extern "C" void free(void *ptr) {
   if (pfree == nullptr) {
     exit(0);
   }
+
+  char a[30] = {0};
+  snprintf(a, 30, "ptr is %p\n\n", ptr);
+  write(2, a, sizeof(a));
 
   pfree(ptr);
 }
