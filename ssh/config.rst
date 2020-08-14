@@ -114,10 +114,19 @@ Useful Options
     UsePAM no
 
 
+To remove passphrase of a key:
+
+.. code-block::
+
+  ssh-keygen -p
+  # then enter the key file and old password
+  # leave the new password empty
+
 References
 ----------
 
 - Configuring ssh to access lab machines `<http://cit.dixie.edu/cs/2810/ssh-config.php>`_
 
     It shows how to configure a ssh tunnel to by-pass the firewall.
+
 
