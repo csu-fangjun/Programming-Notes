@@ -17,3 +17,4 @@ C++ Open Source Projects
   libsndfile
   tcmalloc
   abseil
+  pcre

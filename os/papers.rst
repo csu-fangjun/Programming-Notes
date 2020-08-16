@@ -21,3 +21,12 @@ File systems
 
 .. bibliography:: ref.bib
 
+Memory
+------
+
+- Fast allocation and deallocation of memory based on object lifetimes :cite:`hanson1990fast`
+
+   Memory management based on objects' lifetime. Memory is deallocated at once for a batch of objects.
+
+   Arena is first presented in this paper.
+
