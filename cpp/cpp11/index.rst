@@ -8,3 +8,4 @@ C++11
 
   noexcept
   sfina
+  regex

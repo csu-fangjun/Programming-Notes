@@ -7,3 +7,4 @@ Algorithms
   :maxdepth: 1
 
   sort
+  set
