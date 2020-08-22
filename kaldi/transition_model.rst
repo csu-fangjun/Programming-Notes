@@ -27,8 +27,7 @@ a yes map, and a no map.
 HmmTopology
 -----------
 
-- ``HmmState``, forward pdf class, self loop pdf class, a vector of transitions;
-every transition has  a dest state and a probability.
+- ``HmmState``, forward pdf class, self loop pdf class, a vector of transitions; every transition has  a dest state and a probability.
 
 - ``TopologyEntry``, a vector of ``HmmState``.
 

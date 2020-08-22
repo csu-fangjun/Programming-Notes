@@ -1,2 +1,5 @@
 _build/
 py37/
+*.bin
+*.o
+*.img

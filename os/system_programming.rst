@@ -17,7 +17,7 @@ For x86_64,
 
 For x86, parameters are passed via stack.
 
-.. code-blck::
+.. code-block::
 
   // ebp -> sp
   // ebp + 4 -> return address

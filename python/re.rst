@@ -21,9 +21,10 @@ Examples
 --------
 
 - decimal numerals in c:
+
 .. code-block::
 
-  0|[1-9][0-9]*
+    0|[1-9][0-9]*
 
 - all numerals in c
 

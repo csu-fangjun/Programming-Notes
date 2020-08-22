@@ -13,4 +13,5 @@ Operating Systems
     shared_libraries
     system_programming
     day0
+    day1
     todo

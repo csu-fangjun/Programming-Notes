@@ -6,3 +6,4 @@ Vim
   :maxdepth: 1
 
   ctags
+  hexedit
