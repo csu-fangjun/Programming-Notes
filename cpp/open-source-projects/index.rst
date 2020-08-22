@@ -18,3 +18,4 @@ C++ Open Source Projects
   tcmalloc
   abseil
   pcre
+  grpc
