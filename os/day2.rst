@@ -195,6 +195,10 @@ which is
   :linenos:
 
 
+.. WARNING::
+
+  ``xxx`` is a relative offset and is NOT an absolute offset.
+
 
 .. literalinclude:: ./code/day2/ex1/hello.S
   :caption: relocation table of hello.o
@@ -206,4 +210,17 @@ which is
   :caption: relocation table of hello.o
   :lineno-start: 188
   :lines: 188-190
+  :linenos:
+
+Default linker script
+^^^^^^^^^^^^^^^^^^^^^
+
+``--verbose`` will show the default linker script.
+
+.. code-block::
+
+  ld -m elf_i386 -o hello --verbose hello.o > default-linker-script.ld
+
+.. literalinclude:: ./code/day2/ex1/default-linker-script.ld
+  :caption: default linker script
   :linenos:

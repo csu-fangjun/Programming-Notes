@@ -15,4 +15,9 @@ Operating Systems
     day0
     day1
     day2
+    syscall_note
+    elf_note
+    abi
+    call_convention
     todo
+
