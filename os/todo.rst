@@ -21,3 +21,10 @@ TODO
     `<https://embeddedartistry.com/blog/2019/04/17/exploring-startup-implementations-newlib-arm/>`_.
 
 - `<https://www.cs.dartmouth.edu/~sergey/cs258/ABI/UlrichDrepper-How-To-Write-Shared-Libraries.pdf>`_
+
+- Read `<https://github.com/tuhdo/os01>`_
+
+    Read the book.
+    Learn how to debug with bare metal using gdb.
+
+- Read the source code of uClibc.

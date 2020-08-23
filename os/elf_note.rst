@@ -74,3 +74,15 @@ the constructor of ``Foo()`` for ``f``, and then calls ``__cxa_atexit(&Foo::~Foo
 .. literalinclude:: ./code/elf_note/init.s
   :caption: init.s
   :linenos:
+
+Note that
+- ``__attribute__((constructor))`` is compiled to ``.section	.init_array``
+- ``__attribute__((destructor))`` is compiled to ``.section	.fini_array``
+
+.. literalinclude:: ./code/elf_note/constructor.cc
+  :caption: constructor.cc
+  :linenos:
+
+.. literalinclude:: ./code/elf_note/constructor.s
+  :caption: constructor.s
+  :linenos:

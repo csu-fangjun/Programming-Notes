@@ -12,6 +12,11 @@ init.s: init.cc
 	cat init.s-bak | c++filt > init.s
 	rm init.s-bak
 
+constructor.s: constructor.cc
+	g++ -fno-asynchronous-unwind-tables -S -fno-dwarf2-cfi-asm -o constructor.s constructor.cc
+	# cat init.s-bak | c++filt > init.s
+	# rm init.s-bak
+
 run-hello: hello
 	@./hello; echo "exit code is $$?"
 
