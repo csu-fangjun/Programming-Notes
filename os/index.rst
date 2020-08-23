@@ -14,4 +14,5 @@ Operating Systems
     system_programming
     day0
     day1
+    day2
     todo
