@@ -1,6 +1,15 @@
 TODO
 ====
 
+- `<https://www.jonathanmueller.dev/>`_
+
+    a blog containing c++ articles.
+
+- Links To Examples Of Best Practice For C++ 11/14 Libraries
+
+    `<https://svn.boost.org/trac10/wiki/BestPracticeHandbook>`_
+
+
 - Compiling Clang from Scratch
 
     `<https://shaharmike.com/cpp/build-clang/>`_

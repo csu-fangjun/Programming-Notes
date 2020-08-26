@@ -28,3 +28,23 @@ TODO
     Learn how to debug with bare metal using gdb.
 
 - Read the source code of uClibc.
+
+- The Linux Reading List HOWTO
+
+    `<https://tldp.org/HOWTO/pdf/Reading-List-HOWTO.pdf>`_
+
+    Select some books from this list!
+
+- GCC-Inline-Assembly-HOWTO
+
+   `<http://www.ibiblio.org/gferg/ldp/GCC-Inline-Assembly-HOWTO.html>`_
+
+- Inline Assembly
+
+    `<https://wiki.osdev.org/Inline_Assembly>`_
+
+- Eric Raymond's FAQ collection
+
+  `<http://www.catb.org/~esr/faqs/>`_
+
+

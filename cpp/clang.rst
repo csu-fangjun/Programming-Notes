@@ -2,6 +2,13 @@
 Clang
 =====
 
+
+clang language extensions
+-------------------------
+
+- `<http://clang.llvm.org/docs/LanguageExtensions.html>`_
+
+
 clang-format
 ------------
 
