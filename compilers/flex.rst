@@ -167,6 +167,29 @@ Basics
 - ``.+`` one or more characters
 - ``rs|tu`` ``rs`` or ``tu``
 - ``a(b|c)d``  ``abd`` or ``acd``
+- character classes::
+
+    [:alnum:]  [:alpha:]  [:blank:]
+    [:cntrl:]  [:digit:]  [:graph:]
+    [:lower:]  [:print:]  [:punct:]
+    [:space:]  [:upper:]  [:xdigit:]
+
+- ``[[:alnum:]]`` is equivalent to::
+
+    [[::alpha:][:digit]]
+    [[:alpha:][0-9]]
+    [a-zA-Z0-9]
+
+- There exists also::
+
+    [:^alnum:]  [:^alpha:]   .......
+
+.. warning::
+
+    [:alnum:] is wrapped in [], that is, we use [[:alnum:]]
+
+- ``[a-c]{-}[b-z]``, the set different of ``[a-c]]`` minus ``[b-z]``. ``{-}`` means set differences between two character classes
+- ``[a-c]{+}[b-z]``, set union between ``[a-c]`` and ``[b-z]``.
 
 It will match against the input string as long as possible. The earliest
 patter has a high priority.
@@ -186,4 +209,13 @@ This integer starts from 258. Integer zero means end of file.
 .. code-block::
 
   #define ECHO do { if (fwrite( yytext, yyleng, 1, yyout )) {} } while (0)
+
+References
+----------
+
+- `<http://dinosaur.compilertools.net/flex/manpage.html>`_
+
+    Manual for flex.
+
+- ``info --vi-keys flex``
 

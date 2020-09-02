@@ -15,7 +15,9 @@ exit {printf("exiting!\n"); return 0;}
 {identifier} {printf("an ID: %s\n", yytext);}
 "+"|"-"|"*"|"/" {printf("an operator: %s\n", yytext);}
 ; {printf("semicolon: %s\n", yytext);}
+  /* c++ stle comment */
 "/""/".* {printf("a comment: %s\n", yytext);}
+  /* c style comment */
 "/""*"([^*]|([*][^/]))*"*""/" {printf("a comment: %s\n", yytext);}
 [ \t\n]+
 . {printf("unknown character: %s\n", yytext);}
