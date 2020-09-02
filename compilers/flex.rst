@@ -139,6 +139,16 @@ count lines
   :language: c
   :linenos:
 
+.. note::
+
+  We use ``yytext`` to print the matched string; ``yylen`` is the length of ``yytext``,
+  which is ``strlen(yytext)``.
+
+.. literalinclude:: ./code/flex/detect/detect.l
+  :caption: detect.l
+  :language: flex
+  :linenos:
+
 Basics
 ------
 

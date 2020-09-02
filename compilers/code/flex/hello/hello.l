@@ -11,6 +11,6 @@
 
 /*Even if libfl.a defines `main()`, it is not an error to define our own main() */
 /* int main() { */
-/*   while(yylex()) {} */
+/*   yylex(); */
 /*   return 0; */
 /* } */
