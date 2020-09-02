@@ -13,4 +13,5 @@ run-%: %
 .PHONY: clean
 clean:
 	$(RM) $(targets)
+	$(RM) a.out
 

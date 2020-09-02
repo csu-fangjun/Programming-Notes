@@ -42,7 +42,6 @@ Note that ``/usr/bin/lex`` is a symlink to ``/usr/bin/flex``
   2. We can link to either ``-ll`` or ``-lfl``.
   3. The default output filename of ``lex`` is ``lex.yy.c``.
 
-
 .. code-block::
 
   $ nm /usr/lib/x86_64-linux-gnu/libfl.a
@@ -54,15 +53,91 @@ Note that ``/usr/bin/lex`` is a symlink to ``/usr/bin/flex``
   libyywrap.o:
   0000000000000000 T yywrap
 
+The disassemble output of `libyywrap.o` is:
+
+.. code-block::
+
+    libyywrap.o:     file format elf64-x86-64
+
+    Disassembly of section .text:
+
+    0000000000000000 <yywrap>:
+       0:	b8 01 00 00 00       	mov    $0x1,%eax
+       5:	c3                   	retq
+
+We can see that ``yywrap`` just returns 1.
+
+The disassemble of ``libmain.o`` is:
+
+.. code-block::
+
+    libmain.o:     file format elf64-x86-64
+
+    Disassembly of section .text.startup:
+
+    0000000000000000 <main>:
+       0:	48 83 ec 08          	sub    $0x8,%rsp
+       4:	0f 1f 40 00          	nopl   0x0(%rax)
+       8:	e8 00 00 00 00       	callq  d <main+0xd>
+       d:	85 c0                	test   %eax,%eax
+       f:	75 f7                	jne    8 <main+0x8>
+      11:	48 83 c4 08          	add    $0x8,%rsp
+      15:	c3                   	retq
+
+Its symbol table is ``nm libmain.o``::
+
+    0000000000000000 T main
+                     U yylex
+
+And its relocation table is ``readelf -r libmain.o``::
+
+    Relocation section '.rela.text.startup' at offset 0x188 contains 1 entries:
+      Offset          Info           Type           Sym. Value    Sym. Name + Addend
+    000000000009  000900000002 R_X86_64_PC32     0000000000000000 yylex - 4
+
+    Relocation section '.rela.eh_frame' at offset 0x1a0 contains 1 entries:
+      Offset          Info           Type           Sym. Value    Sym. Name + Addend
+    000000000020  000100000002 R_X86_64_PC32     0000000000000000 .text.startup + 0
+
+which is equivalent to::
+
+    extern int yylex();
+    int main() {
+      while(yylex()) {}
+      return 0;
+    }
+
 To run ``./hello``, we can use:
 
   1. ``./hello``, then enter any string ending with a newline, it will print something.
-  2. ``printf "hello worldexit"``, it will print
+  2. ``printf "hello world\nexit" | ./hello``, it will print
 
   .. code-block::
 
     Good bye.
     exiting
+
+.. NOTE::
+
+  Anything that is not matched by the pattern is copied to output by default.
+
+count lines
+-----------
+
+.. literalinclude:: ./code/flex/count_lines/count.l
+  :caption: count.l
+  :language: c
+  :linenos:
+
+.. literalinclude:: ./code/flex/count_lines/count2.l
+  :caption: count2.l
+  :language: c
+  :linenos:
+
+.. literalinclude:: ./code/flex/count_lines/count3.l
+  :caption: count3.l
+  :language: c
+  :linenos:
 
 Basics
 ------

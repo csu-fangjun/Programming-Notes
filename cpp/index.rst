@@ -27,4 +27,7 @@ C++ Programming
   memory
   ubuntu
   gcc
+  style_guide
+  libc
+  crt
 

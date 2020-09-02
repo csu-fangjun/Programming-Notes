@@ -1,6 +1,51 @@
 TODO
 ====
 
+- Dynamic Storage Allocation A Survey and Critical Review
+
+  A paper: `<https://users.cs.northwestern.edu/~pdinda/icsclass/doc/dsa.pdf>`_
+
+- 从TokyoWesterns 2019一道题谈谈在exit中的利用机会
+
+    `<https://xz.aliyun.com/t/6260>`_
+
+    `<https://github.com/NixOS/patchelf>`_
+
+
+
+- `<https://uclibc-ng.org/>`_
+
+- `<https://busybox.net/>`_
+
+- `<https://ftp.gnu.org/gnu/glibc/>`_
+
+    Various versions of glibc.
+
+- `<https://en.wikipedia.org/wiki/Bionic_(software)>`_
+
+    libc for Android.
+
+- `<https://github.com/ifduyue/musl.git>`_
+
+  - `<https://www.musl-libc.org/faq.html>`_
+
+- `<http://ftp.be.debian.org/pub/linux/libs/dietlibc/>`_
+
+    2002: `<http://ftp.be.debian.org/pub/linux/libs/dietlibc/dietlibc-0.20.tar.bz2>`_
+
+
+- AT&T UNIX System V Source Code
+
+    `<https://archive.org/details/ATTUNIXSystemVRelease4Version2>`_
+
+- `<http://bravegnu.org/gnu-eprog/c-startup.html>`_
+
+    C Startup and linker script example.
+
+- `<https://github.com/managarm/mlibc>`_
+
+    libc from scratch
+
 - `<https://www.jonathanmueller.dev/>`_
 
     a blog containing c++ articles.
