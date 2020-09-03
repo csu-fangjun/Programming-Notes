@@ -2,6 +2,10 @@
 TODO
 ====
 
+- `<https://github.com/hzcx998/xbook2>`_
+
+    OS from scratch.
+
 ``-save-temps`` of gcc.
 
 - PLT and GOT - the key to code sharing and dynamic libraries

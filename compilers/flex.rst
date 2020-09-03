@@ -192,8 +192,7 @@ Basics
 - ``[a-c]{+}[b-z]``, set union between ``[a-c]`` and ``[b-z]``.
 
 It will match against the input string as long as possible. The earliest
-patter has a high priority.
-
+pattern has a higher priority.
 
 The function ``yylex()`` parses one token and returns an ``int`` and it will set several
 global variables:
@@ -203,12 +202,20 @@ global variables:
 
 When using flex together with ``bison``, ``yylex()`` returns an integer defined by ``bison``.
 This integer starts from 258. Integer zero means end of file.
+The integer indicates the type of the token. The token is expected by bison
+to be in ``yylval``.
+
+.. note::
+
+  In flex, we use ``yytext`` and ``yyleng``. But in bison, we use ``yylval``.
 
 ``ECHO`` is a C macro defined as
 
 .. code-block::
 
   #define ECHO do { if (fwrite( yytext, yyleng, 1, yyout )) {} } while (0)
+
+which is called when no pattern is matched.
 
 References
 ----------
@@ -219,3 +226,16 @@ References
 
 - ``info --vi-keys flex``
 
+- `<https://pubs.opengroup.org/onlinepubs/9699919799/utilities/lex.html>`_
+
+    The posix standard that defines the functions and syntax of lex.
+
+- `<https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap09.html>`_
+
+    Posix regular expression standard.
+
+- `<https://wolfram.schneider.org/bsd/7thEdManVol2/lex/lex.pdf>`_
+
+    Lesk, Michael E., and Eric Schmidt. "Lex: A lexical analyzer generator." (1975).
+
+    The original paper for Lex.
