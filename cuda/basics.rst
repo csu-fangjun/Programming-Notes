@@ -2,6 +2,15 @@
 Basics
 ======
 
+IDs
+---
+
+- ``threadIdx.x``, ``threadIdx.y``, ``threadIdx.z``. Its dimension is
+  ``blockDim.x``, ``blockDim.y`` and ``blockDim.z``. That is, the maximum
+  ``threadIdx.x`` is ``blockDim.x - 1``
+
+- ``blockIdx.x``, ``blockIdx.y``, ``blockIdx.z``
+
 Thread bolck
 ------------
 
@@ -13,6 +22,10 @@ A thread block contains many threads.
 
 The maximum number of threads in a thread block is 1024; that is,
 ``threadIdx.z * threadIdx.y * threadIdx.x <= 1024``
+
+- For 1-D, thread id is ``x``
+- For 2-D, thread is is ``x + y * Dx``
+- For 3-D, thread id is ``x + y * Dx + z * Dx * Dy``
 
 Grid block
 ----------
@@ -34,7 +47,9 @@ Memory Hierarchy
 ----------------
 
 - every thread has its own private memory (per thread local memory)
-- every block has a shared memory that can be accessed only by threads within this block (per block shared memory)
+- every block has a shared memory that can be accessed only by threads within this block (per block shared memory).
+  Threads in the same block can use ``__syncthreads()`` for synchronization.
+
 - all threads from different blocks can access the ``global`` memory,
   the readonly ``constant`` and ``texture`` memory
 
@@ -67,6 +82,13 @@ The option to specify the virtual gpu is ``-arch`` or
 ``--gpu-architecture``.
 
 ``--gpu-code`` or ``-code`` is for real GPU.
+
+``nvcc x.cu -arch=compute_20 -code=compute_20``: generate PTX for virtual architecture
+specified by ``-arch``; generate for for JIT specified by ``-code``.
+
+``nvcc x.cu -arch=compute_30 -code=compute_30,sm_30,sm_35``: generate PTX for virtual
+architecture specified by ``-arch``; generate real code for ``sm_30, sm_35`` specified
+by ``-code``; generate JIT code for ``compute_30`` specified by ``-code``.
 
 C++ Language Extension
 ----------------------

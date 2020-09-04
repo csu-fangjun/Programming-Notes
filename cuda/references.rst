@@ -3,6 +3,10 @@ References
 ==========
 
 
+- `<https://docs.nvidia.com/cuda/pdf/CUDA_C_Programming_Guide.pdf>`_
+
+    CUDA C++ Programming Guide. Note that the URL is C, but it's actually C++.
+
 Lecture Notes
 -------------
 

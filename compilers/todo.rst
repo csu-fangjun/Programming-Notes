@@ -2,6 +2,10 @@
 TODO
 ====
 
+- Compiler Construction using Flex and Bison Anthony A. Aaby
+
+    A book: search it from gen.lib.rus.ec
+
 - Aho, Alfred V., and Margaret J. Corasick. "Efficient string matching: an aid to bibliographic search." Communications of the ACM 18, no. 6 (1975): 333-340.
 
   The underlying theory for ``lex``.
