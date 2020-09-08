@@ -2,6 +2,8 @@
 TODO
 ====
 
+- `<https://0xax.gitbooks.io/linux-insides/content/index.html>`_
+
 - `<https://github.com/hzcx998/xbook2>`_
 
     OS from scratch.
