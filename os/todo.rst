@@ -2,6 +2,34 @@
 TODO
 ====
 
+- `<https://www.cs.cmu.edu/~410-s07/p4/p4-boot.pdf>`_
+
+- `<https://www.cs.cmu.edu/~410-s07/lecture.html>`_
+
+- `<https://github.com/lpsantil/rt0>`_
+
+- Phil Storrs PC Hardware book
+
+    `<http://web.archive.org/web/20040603133829/http://members.iweb.net.au/~pstorr/pcbook/index.htm>`_
+
+- `<http://www.cs.technion.ac.il/~cs236376/reference.html>`_
+
+- `<https://my.eng.utah.edu/~cs5460/OS-s14/lab1.html>`_
+
+- `<https://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf>`_
+
+    A book: Writing a Simple Operating System  from Scratch
+
+- `<https://github.com/ghaiklor/ghaiklor-os-gcc>`_
+
+- `<https://sourceware.org/gdb/onlinedocs/gdb/TUI-Commands.html>`_
+
+- `<https://stackoverflow.com/questions/22054578/how-to-run-a-program-without-an-operating-system/32483545#32483545>`_
+
+- `<https://github.com/cirosantilli/x86-bare-metal-examples>`_
+
+- `<https://github.com/cirosantilli/linux-kernel-module-cheat#userland-assembly>`_
+
 - `<https://0xax.gitbooks.io/linux-insides/content/index.html>`_
 
 - `<https://github.com/hzcx998/xbook2>`_

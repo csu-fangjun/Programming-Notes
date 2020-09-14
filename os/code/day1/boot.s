@@ -16,14 +16,16 @@ start:
   int $0x10
   loop 1b
 
-  mov $0x50, %ax
+  # change it to 0x50 if we use hello.elf
+  # change it to 0x60 if we use hello.bin
+  mov $0x60, %ax
   mov %ax, %es
   xor %bx, %bx
 
   # the content is read into es:bx, e.g., 0x500
 
   # http://www.ablmcc.edu.hk/~scy/CIT/8086_bios_and_dos_interrupts.htm#int13h_02h
-  mov $1, %al # number of sectors to read
+  mov $30, %al # number of sectors to read
   mov $0, %ch # cylinder number, i.e., track number
   mov $2, %cl # sector number, count from 1!
   mov $0, %dh # head number
@@ -32,7 +34,10 @@ start:
   mov $0x02, %ah
   int $0x13
 
-  ljmp $0x00, $0x500 # ljmp %cs, %ip
+  ljmp $0x00, $0x600 # ljmp %cs, %ip
+
+
+
 
   # go to sample.s
 
