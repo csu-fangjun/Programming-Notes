@@ -5,6 +5,7 @@
   test_##x();
 
 int main() {
-  TEST(hello);
+  // TEST(hello);
+  TEST(tensor);
   return 0;
 }
