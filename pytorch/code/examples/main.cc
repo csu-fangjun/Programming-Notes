@@ -6,6 +6,7 @@
 
 int main() {
   // TEST(hello);
-  TEST(tensor);
+  // TEST(tensor);
+  TEST(intrusive_ptr);
   return 0;
 }

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.8 FATAL_ERROR)
 
 project(k2 CUDA CXX)
 
-set(Python_ADDITIONAL_VERSIONS 3.6 3.7)
+set(Python_ADDITIONAL_VERSIONS 3.8 3.6 3.7)
 find_package(PythonInterp)
 get_filename_component(PYTHON_DIR ${PYTHON_EXECUTABLE} DIRECTORY)
 
@@ -30,7 +30,11 @@ find_package(Torch REQUIRED)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
 
 
-add_library(hello SHARED hello.cc tensor.cc)
+add_library(hello SHARED
+  hello.cc
+  intrusive_ptr_test.cc
+  tensor.cc
+  )
 set_property(TARGET hello PROPERTY CXX_STANDARD 14)
 
 target_include_directories(hello PUBLIC
