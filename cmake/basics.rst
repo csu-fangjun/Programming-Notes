@@ -69,4 +69,8 @@ Comment
   Of course, you can put a ``#`` at the begining of every line to acheive the same
   effect.
 
+FetchContent_Declare
+====================
 
+For pybind11, The generated scripts are in
+``build/_deps/pybind11-subbuild/CMakeFiles/pybind11-populate.dir``.

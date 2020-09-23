@@ -20,20 +20,22 @@ list(GET PYTHON_INCLUDE_DIRS 0 PYTHON_INCLUDE_DIRS)
 string(REPLACE "-I" "" PYTHON_INCLUDE_DIRS ${PYTHON_INCLUDE_DIRS})
 
 # or we can use `print(torch.utils.cmake_prefix_path)`
-execute_process(
-  COMMAND "${PYTHON_EXECUTABLE}" -c "import os; import torch; print(os.path.dirname(torch.__file__))"
-  OUTPUT_STRIP_TRAILING_WHITESPACE
-  OUTPUT_VARIABLE TORCH_DIR
-)
+# execute_process(
+#   COMMAND "${PYTHON_EXECUTABLE}" -c "import os; import torch; print(os.path.dirname(torch.__file__))"
+#   OUTPUT_STRIP_TRAILING_WHITESPACE
+#   OUTPUT_VARIABLE TORCH_DIR
+# )
+
 list(APPEND CMAKE_PREFIX_PATH "${TORCH_DIR}")
 find_package(Torch REQUIRED)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
 
 
 add_library(hello SHARED
-  hello.cc
-  intrusive_ptr_test.cc
-  tensor.cc
+  cuda.cc
+  # hello.cc
+  # intrusive_ptr_test.cc
+  # tensor.cc
   )
 set_property(TARGET hello PROPERTY CXX_STANDARD 14)
 
