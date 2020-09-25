@@ -38,6 +38,13 @@ set timezone
         apt-get clean && \
         rm -rf /var/lib/apt/lists/*
 
+.. code-block::
+
+    ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+    echo "Asia/Shanghai" > /etc/timezone
+    apt-get update && apt-get install -y --no-install-recommends tzdata
+    dpkg-reconfigure -f noninteractive tzdata
+
 expose
 ------
 
