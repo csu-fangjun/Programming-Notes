@@ -6,6 +6,7 @@ srcs += attr_test.cc
 srcs += array_test.cc
 srcs += vector_test.cc
 srcs += basics_test.cc
+srcs += classes.cc
 
 objs := $(srcs:%.cc=%.o)
 

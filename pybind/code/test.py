@@ -2,8 +2,8 @@
 
 import hello
 
-print(hello.add(1, 2))
-print(dir(hello))
+#  print(hello.add(1, 2))
+#  print(dir(hello))
 
 
 def test_vector():
@@ -26,9 +26,14 @@ def test_pointers():
     print(help(hello.inc))
 
 
+def test_classes():
+    hello.foo()
+
+
 def main():
-    test_vector()
-    test_pointers()
+    #  test_vector()
+    #  test_pointers()
+    test_classes()
 
 
 if __name__ == '__main__':
