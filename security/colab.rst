@@ -19,3 +19,11 @@ an account. Get the token:
   from colab_ssh import launch_ssh
   launch_ssh('1eIJYedmsAUrNHWOTCntHFBcn8P_2LKRAzhBevRkiGK5PUNqQ','optional-password')
 
+
+Display Images
+--------------
+
+.. code-block::
+
+  from IPython.display import Image
+  Image('/path/to/filename.png')
