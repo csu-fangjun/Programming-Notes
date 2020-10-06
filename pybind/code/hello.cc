@@ -11,6 +11,7 @@ extern void TestArray(py::module &m);
 extern void TestVectorOpaque(py::module &m);
 extern void TestBasics(py::module &m);
 extern void TestClasses(py::module &m);
+extern void TestDoc(py::module &m);
 
 PYBIND11_MODULE(hello, m) {
   m.doc() = "pybind11 hello world"; // optional module docstring
@@ -25,4 +26,5 @@ PYBIND11_MODULE(hello, m) {
   TestVectorOpaque(m);
   TestBasics(m);
   TestClasses(m);
+  TestDoc(m);
 }

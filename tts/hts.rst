@@ -2,6 +2,9 @@
 HTS
 ===
 
+Installation
+------------
+
 .. code-block::
 
   # go to http://hts.sp.nitech.ac.jp/
@@ -39,4 +42,11 @@ HTS
 
 Add ``$HOME/software/htk/bin`` to ``PATH``.
 
+
+Tutorials
+---------
+
+- Preparing Data for Training an HTS Voice
+
+  `<http://www.cs.columbia.edu/~ecooper/tts/data.html>`_
 
