@@ -18,13 +18,23 @@ CXXFLAGS += $(shell python3 -m pybind11 --includes)
 
 name := hello$(suffix)
 
+OS := $(shell uname -s)
+ifeq ($(OS), Darwin)
+SHARED_LIB_FLAG := -dynamiclib -Wl,-flat_namespace
+SHARED_LIB_FLAG += -Wl,-undefined,suppress
+# either suppress or dynamic_lookup is fine
+# SHARED_LIB_FLAG += -Wl,-undefined,dynamic_lookup
+else
+SHARED_LIB_FLAG := -shared
+endif
+
 all: $(name)
 
 %.o: %.cc header.h
 	$(CXX) -c -fPIC $(CXXFLAGS) -o $@ $<
 
 $(name): $(objs)
-	$(CXX) -shared -o $@ $^
+	$(CXX) $(SHARED_LIB_FLAG) -o $@ $^
 
 .PHONE: clean test
 
