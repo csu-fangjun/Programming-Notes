@@ -1,4 +1,5 @@
 #include <cassert>
+#include <string>
 
 #include "header.h"
 
@@ -9,25 +10,34 @@
 static void TestImpl() {
   static_assert(py::detail::is_pyobject<py::handle>::value, "");
 
-  PyObject* o = PyUnicode_FromString("hello");
+  PyObject *o = PyUnicode_FromString("hello");
   assert(Py_REFCNT(o) == 1);
 
   {
-    py::handle h(o);            // it steals the reference
-    assert(Py_REFCNT(o) == 1);  // still 1
+    py::handle h(o);           // it steals the reference
+    assert(Py_REFCNT(o) == 1); // still 1
     assert(h.ptr() == o);
 
     h.inc_ref();
-    assert(Py_REFCNT(o) == 2);  // now it is 2!
+    assert(Py_REFCNT(o) == 2); // now it is 2!
+    assert(h.ref_count() == 2);
 
     h.dec_ref();
-    assert(Py_REFCNT(o) == 1);  // now it is 1!
-    assert(h);                  // ptr is not null, so h is true
+    assert(Py_REFCNT(o) == 1); // now it is 1!
+    assert(h.ref_count() == 1);
+    assert(h); // ptr is not null, so h is true
+
+    std::string s = h.cast<std::string>();
+    assert(s == "hello");
+
+    s = py::str(h);
+    assert(s == "hello");
   }
+
   {
     py::handle h;
     assert(h.ptr() == nullptr);
-    assert(!h);  // ptr is null, so h is false
+    assert(!h); // ptr is null, so h is false
   }
 
   Py_XDECREF(o);
