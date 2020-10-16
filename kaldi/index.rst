@@ -17,4 +17,5 @@ Kaldi
   transition_model
   egs
   todo
+  lattices
 

@@ -11,3 +11,4 @@ PyTorch
   audio
   open-source
   extension
+  show-info
