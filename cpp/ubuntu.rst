@@ -13,3 +13,6 @@ Ubuntu
 
   update-alternative --install /usr/bin/gcc gcc /usr/bin/gcc-9 90
   update-alternative --install /usr/bin/gcc gcc /usr/bin/gcc-10 100
+
+``ubuntu:20.10`` installs ``gcc-10`` if ``apt-get install build-essential``
+is used.
