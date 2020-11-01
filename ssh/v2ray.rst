@@ -8,6 +8,7 @@ It requires only 2GB for t2.micro to install Ubuntu 18.04.
 
   wget https://git.io/v2ray.sh
   sudo ./v2ray.sh
+  # enable the port on EC2 !!!
 
 Use default settings:
 

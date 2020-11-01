@@ -9,3 +9,4 @@ ssh is used for remote logging and copying files.
     config
     v2ray
     port_forward
+    trojan
