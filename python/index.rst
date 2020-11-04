@@ -6,6 +6,7 @@ Python
   :maxdepth: 1
 
   basics
+  pip
   miniconda
   re
   venv
