@@ -2,6 +2,11 @@
 TODO
 ====
 
+20201106
+--------
+
+- `<https://homepages.cwi.nl/~jack/macpython/>`_
+
 - `<https://github.com/xtensor-stack/xtensor-python/blob/master/include/xtensor-python/pyarray.hpp>`_
 
 - Python/C API Reference Manual

@@ -25,6 +25,8 @@ We have to install the following dependencies according to
     curl llvm libncurses5-dev xz-utils libxml2-dev libxmlsec1-dev \
     libffi-dev liblzma-dev
 
+To list available python versions for installing, use ``pyenv install -l``.
+
 To install python 3.7, use:
 
 .. code-block::
