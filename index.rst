@@ -18,6 +18,7 @@ Refer to :ref:`sphinx_install` page for how to build this website.
    :maxdepth: 1
    :caption: Table of Contents
 
+   android/index
    sphinx/index
    ssh/index
    os/index
