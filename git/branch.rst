@@ -22,3 +22,11 @@ Delete remote branch
 
     git push origin --delete `<branch-name>`
 
+
+Remove unsed remote branches locally
+------------------------------------
+
+.. code-block::
+
+   git remote prune origin
+
