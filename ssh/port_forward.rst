@@ -13,6 +13,17 @@ Open another terminal and logging into ``yourMachine.com``:
 
   ssh -p 2210 user@localhost # it will connect to some-machine
 
+In ``.ssh/config``, it looks like the following:
+
+.. code-block::
+
+  Host alias
+    Hostname yourMachine.com
+    User username
+    IdentityFile ~/.ssh/xxx
+    RemoteForward 2210 localhost:22
+
+
 To bypass host verification:
 
 .. code-block::
