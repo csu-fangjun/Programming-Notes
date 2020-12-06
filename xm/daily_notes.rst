@@ -1,9 +1,37 @@
 
+2020-12-05
+----------
+
+- How to Implement Performance Metrics in CUDA C/C++
+
+    `<https://developer.nvidia.com/blog/how-implement-performance-metrics-cuda-cc/>`_
+
+    It describes how to do timing using CUDA event and how to measure bandwidth.
+
+- How to Query Device Properties and Handle Errors in CUDA C/C++
+
+    `<https://developer.nvidia.com/blog/how-query-device-properties-and-handle-errors-cuda-cc/>`_
+
+- How to Optimize Data Transfers in CUDA C/C++
+
+    `<https://developer.nvidia.com/blog/how-optimize-data-transfers-cuda-cc/>`_
+
+    Measure bandwidth of paged locked memory.
+
+- PinnedMemoryAllocator in PyTorch
+
+    aten/src/ATen/cuda/PinnedMemoryAllocator.{h,cpp}
+    aten/src/THC/THCGeneral.cpp
+    aten/src/THC/THCCachingHostAllocator.h
+
+
+
+
 2020-11-27
-==========
+----------
 
 TODO
-----
+~~~~
 
 - `<https://github.com/pytorch/audio/blob/fb3ef9ba427acd7db3084f988ab55169fab14854/packaging/pkg_helpers.bash#L123>`_
   says it uses soumith/manylinux-cuda* Docker image.

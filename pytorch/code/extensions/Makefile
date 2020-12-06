@@ -32,7 +32,9 @@ LDFLAGS += -L$(TORCH_INSTALL_DIR)/lib
 LDFLAGS += -lc10 -ltorch -ltorch_cpu -ltorch_python
 LDFLAGS += -Wl,-rpath,$(TORCH_INSTALL_DIR)/lib
 
-HAS_CUDA := $(shell test -d $(CUDA_HOME) && echo yes || echo no)
+# HAS_CUDA := $(shell test -d $(CUDA_HOME) && echo yes || echo no)
+HAS_CUDA := $(shell python3 -c 'import torch; print("yes" if torch.cuda.is_available() else "no")')
+$(info "has cuda: $(HAS_CUDA)")
 
 ifeq ($(HAS_CUDA),yes)
 CXXFLAGS += -I$(CUDA_HOME)/include

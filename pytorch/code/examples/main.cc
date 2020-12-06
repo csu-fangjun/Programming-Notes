@@ -1,13 +1,14 @@
 
 
 #define TEST(x)                                                                \
-  void test_##x();                                                             \
-  test_##x();
+  void Test##x();                                                              \
+  Test##x();
 
 int main() {
   // TEST(hello);
   // TEST(tensor);
-  TEST(cuda);
+  // TEST(cuda);
   // TEST(intrusive_ptr);
+  TEST(Device);
   return 0;
 }
