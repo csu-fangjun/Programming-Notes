@@ -25,6 +25,8 @@
     aten/src/THC/THCCachingHostAllocator.h
 
 
+- `<https://on-demand.gputechconf.com/gtc/2014/presentations/S4158-cuda-streams-best-practices-common-pitfalls.pdf>`_
+
 
 
 2020-11-27
