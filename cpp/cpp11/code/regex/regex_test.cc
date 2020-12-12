@@ -36,9 +36,6 @@ int main() {
     assert(sm[0] == "aaab"); // 0: the entire match
     assert(sm[1] == "a");
     std::cout << "sm2: " << sm[0] << std::endl;
-    std::cout << "sm2: " << sm[1] << std::endl;
-    std::cout << "sm2: " << sm[2] << std::endl;
-    std::cout << "sm2: " << sm[3] << std::endl;
     // assert(sm[2] == "a");
   }
 }

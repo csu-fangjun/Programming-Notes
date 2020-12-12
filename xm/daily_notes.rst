@@ -1,4 +1,77 @@
 
+2020-12-12
+----------
+
+- What every systems programmer should know about concurrency
+
+    `<https://assets.bitbashing.io/papers/concurrency-primer.pdf>`_
+
+
+2020-12-08
+----------
+
+- google/benchmark
+
+    The first commit is 403f3544 on 2013.12.19
+
+    - `CMAKE_CXX_FLAGS`: `-Wall -Werror -std=c++0x`
+    - `CMAKE_CXX_FLAGS_DEBUG`: `-g -O0 -DDEBUG`
+    - `CMAKE_CXX_FLAGS_RELEASE`: `-fno-strict-aliasing -O3 -DNDEBUG`
+
+    To detect for different operating systems in CMake:
+
+    - macOS::
+
+      if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+        ...
+      endif()
+
+    - Linux::
+
+      if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+        ...
+      endif()
+
+    - Windows::
+
+      if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+
+    - To detect x86 CPU::
+
+      if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "x86")
+        add_definitions(-DARCH_X86)
+      endif()
+        ...
+      endif()
+
+    This is how it defines ``arraysize``::
+
+        template <typename T, size_t N>
+        char (&ArraySizeHelper(T (&array)[N]))[N];
+
+        #define arraysize(array) (sizeof(ArraySizeHelper(array)))
+
+    It uses some tricks to define the macro ``STATIC_ASSERT``. It also
+    defines ``CHECK``, ``CHECK_EQ``, ``CHECK_NE`` and so on.
+
+- `<https://github.com/google/nvidia_libs_test>`_
+
+    benchmark of cuDNN with google benchmark.
+
+    It also uses abseil!
+
+- `<https://docs.nvidia.com/cuda/cuda-samples/index.html#simple>`_
+
+    CUDA samples
+
+2020-12-08
+----------
+
+- Read source code of PyTorch
+
+    - git reset --hard  c7d7d # initial revamp of torch7 tree
+
+
 2020-12-05
 ----------
 
