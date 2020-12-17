@@ -6,6 +6,27 @@
 
     `<https://assets.bitbashing.io/papers/concurrency-primer.pdf>`_
 
+- `<https://en.wikipedia.org/wiki/Test-and-set>`_
+
+    Test-and-Set Lock is short for TSL.
+
+    See test-test-and-set.
+
+    See `<https://en.cppreference.com/w/cpp/atomic/atomic_flag>`_.
+
+- `<https://en.wikipedia.org/wiki/Compare-and-swap>`_
+
+    Compare and Swap is short for CAS.
+
+- A Simple GPU Hash Table
+
+    `<https://nosferalatu.com/SimpleGPUHashTable.html>`_
+
+
+TODO
+~~~~
+
+- What is warp divergence in CUDA?
 
 2020-12-08
 ----------

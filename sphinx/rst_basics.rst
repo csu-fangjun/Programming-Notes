@@ -20,12 +20,15 @@ URLs:
 .. _Another link to Google: https://google.com
 
 
+See `<https://sublime-and-sphinx-guide.readthedocs.io/en/latest/references.html>`_
+for adding links.
 
 References
 ----------
 
 - Read the Docs Sphinx Theme [1]_
 - `reStructuredText Primer`_
+
 
 
 
