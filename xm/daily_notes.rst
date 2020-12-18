@@ -1,4 +1,26 @@
 
+2020-12-18
+----------
+
+Compilation of torchaudio::
+
+  sudo apt-get install libsox-dev
+  python setup.py bdist_wheel
+
+Notes about torchaudio code
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**backend**
+
+  ``backend/utils.py``
+
+  ``torchaudio.info``: ``info`` is an attribute of ``torchaudio``,
+  which is set in ``backend/utils.py``. It is called by ``utils._init_audio_backend()``
+  and ``_init_audio_backed`` is in ``backend/__init__.py`` and is called automatically
+  on import.
+
+  There are other three methods like ``info``: ``save``, ``load``, ``load_wav``.
+
 2020-12-12
 ----------
 
