@@ -11,3 +11,5 @@ Config
     git config user.name "Your Name"
     git config user.email "your@email.com"
 
+    # if using https, the following settings will cache the password
+    git config --global credential.helper cache
