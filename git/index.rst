@@ -16,3 +16,4 @@ Git
   auto-complete
   repo
   gerrit
+  remote
