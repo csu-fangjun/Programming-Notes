@@ -10,4 +10,3 @@ Speech Separation
 
     The paper also describes some open-source dataset and projects!
 
-.. bibliography:: speech-separation.bib

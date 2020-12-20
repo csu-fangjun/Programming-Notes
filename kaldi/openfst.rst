@@ -144,4 +144,3 @@ TODO
 
 - https://www.cs.jhu.edu/~jason/465/hw-ofst/hw-ofst.pdf
 
-.. bibliography:: ref.bib

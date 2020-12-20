@@ -11,7 +11,7 @@ Submodules
 Add a submodule
 ---------------
 
-..code-block::
+.. code-block::
 
   git submodule add git@host:repo  ./external/repo
 
@@ -38,9 +38,9 @@ Init a submodule
 Remove a submodule
 ------------------
 
-1. Manually modify `.gitmoduels` to remove every related to the submodule
+1. Manually modify `.gitmodules` to remove all files related to the submodule
 
-2. Manually modify `.git/config` to remove every related to the submodule if
+2. Manually modify `.git/config` to remove all files related to the submodule if
 we have run `git submodule init`
 
 3. Remove the submodule folder: ``git rm --cached external/repo``

@@ -9,4 +9,3 @@ Set
 
     There is a C implementation: `<https://github.com/ericherman/libfastset>`_.
 
-.. bibliography:: ref.bib

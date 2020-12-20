@@ -1,0 +1,41 @@
+{
+    "cited": {
+        "algorithms/set": [
+            "briggs1993efficient"
+        ],
+        "deep_learning/normalization": [
+            "salimans2016weight"
+        ],
+        "deep_learning/quantization": [
+            "jacob2018quantization"
+        ],
+        "kaldi/asr_papers": [
+            "juang2005automatic"
+        ],
+        "kaldi/openfst": [
+            "mohri1996some",
+            "mohri1994compact",
+            "mohri1997finite",
+            "mohri2005weighted",
+            "mohri2000design",
+            "allauzen2007openfst"
+        ],
+        "os/papers": [
+            "hansen2001evolution",
+            "ritchie1978unix",
+            "thompson1978unix",
+            "lavington1978manchester",
+            "ritchie1984unix",
+            "bourne1978unix",
+            "ritchie1978unixTheC",
+            "mckusick1984fast",
+            "hanson1990fast"
+        ],
+        "tts/references": [
+            "ze2013statistical"
+        ],
+        "tts/speech-separation": [
+            "pariente2020asteroid"
+        ]
+    }
+}

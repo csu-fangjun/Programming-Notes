@@ -17,3 +17,4 @@ Git
   repo
   gerrit
   remote
+  tag

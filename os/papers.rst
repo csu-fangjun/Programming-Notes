@@ -19,8 +19,6 @@ File systems
 - A fast file system for UNIX :cite:`mckusick1984fast`
 
 
-.. bibliography:: ref.bib
-
 Memory
 ------
 

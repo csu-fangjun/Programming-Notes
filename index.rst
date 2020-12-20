@@ -54,3 +54,8 @@ Books
 =====
 
 - `<http://gen.lib.rus.ec/>`_
+
+References
+==========
+
+.. bibliography::

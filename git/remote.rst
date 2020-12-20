@@ -58,3 +58,18 @@ prints::
       fangjun-doc        pushes to fangjun-doc        (local out of date)
       fangjun-ragged-ops pushes to fangjun-ragged-ops (up to date)
       master             pushes to master             (up to date)
+
+
+Rename a branch
+---------------
+
+.. code-block::
+
+  git remote rename <old_name> <new_name>
+
+Remove a branch
+---------------
+
+.. code-block::
+
+  git remote remove <name>
