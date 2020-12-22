@@ -25,3 +25,4 @@ Python
   c_api_long_object
   flask
   anaconda
+  jupyter
