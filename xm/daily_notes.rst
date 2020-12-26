@@ -1,4 +1,83 @@
 
+2020-12-25
+----------
+
+Wav2Letter
+~~~~~~~~~~
+
+1. It proposed `ASG`, automiatic segmentation criteria
+
+There is a blog
+`<https://mobilemonitoringsolutions.com/presentation-wav2letter-facebooks-fast-open-source-speech-recognition-system/>`_
+about it. It mentions several c++ library:
+
+  - ArrayFire, an open-source tensor library, supporting CPU, CUDA and OpenCL
+  - Flashlight, a neural network library, built on top of ArrayFire
+
+    - It has autograd!
+
+`<https://github.com/facebookresearch/wav2letter>`_
+
+`<https://github.com/facebookresearch/wav2letter/wiki/Data-Preparation>`_
+describes the data format expected by wave2letter.
+
+Letter-based speech recognition with gated convnets `<https://arxiv.org/pdf/1712.09444.pdf>`_
+says that ASG without transitions are hard to train.
+
+Wav2Letter++: The fastest open-source speech recognition system
+`<https://arxiv.org/pdf/1812.07625.pdf>`_
+
+`<https://github.com/facebookresearch/wav2letter/tree/v0.2/tutorials/1-librispeech_clean>`_
+
+  tutorial about wav2letter with librispeech
+
+
+The librispeech dataset is in `/home/storage04/zhuangweiji/data/open-source-data/librispeech/`.
+
+TODO
+~~~~
+
+- Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data
+
+    Cited more that 14784 times!
+
+    `<https://nlp.cs.nyu.edu/nycnlp/lafferty01conditional.pdf>`_
+
+    `<https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Conditional+Random+Fields%3A+Probabilistic+Models+for+Segmenting+and+Labeling+Sequence+Dat&btnG=>`_
+
+- `<https://github.com/kpu/kenlm>`_
+
+    For language modeling. Read its code!
+
+
+
+2020-12-24
+----------
+
+TODOs
+~~~~~
+
+1. `<https://github.com/k2-fsa/k2/pull/427#discussion_r547625364>`_
+
+    Resolve this comments!
+
+2020-12-22
+----------
+
+TODOs
+~~~~~
+
+- 1. ragged_ops.cu, line 198, in RaggedShapeFromTotSizes
+
+    Allocate a big block of memory.
+
+- 2 . ragged_ops.cu
+
+    Context() can be assigned to a reference, for example, in GetRowInfo.
+
+    Read the implementation of `AppendAxis0()`. How to use TaskRedirect?
+
+
 2020-12-18
 ----------
 
