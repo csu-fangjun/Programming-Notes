@@ -30,4 +30,5 @@ C++ Programming
   style_guide
   libc
   crt
+  exception
 
