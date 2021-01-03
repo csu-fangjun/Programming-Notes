@@ -1,0 +1,16 @@
+=================================================================
+==1375327==ERROR: AddressSanitizer: alloc-dealloc-mismatch (malloc vs operator delete) on 0x602000000010
+    #0 0x7fb8091cb9c8 in operator delete(void*, unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe19c8)
+    #1 0x561323fc8854 in main /root/fangjun/open-source/.n/compilers/code/asan/ex3.cc:7
+    #2 0x7fb808d1ab96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #3 0x561323fc8759 in _start (/root/fangjun/open-source/.n/compilers/code/asan/ex3+0x759)
+
+0x602000000010 is located 0 bytes inside of 4-byte region [0x602000000010,0x602000000014)
+allocated by thread T0 here:
+    #0 0x7fb8091c8b40 in __interceptor_malloc (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xdeb40)
+    #1 0x561323fc8847 in main /root/fangjun/open-source/.n/compilers/code/asan/ex3.cc:6
+    #2 0x7fb808d1ab96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+SUMMARY: AddressSanitizer: alloc-dealloc-mismatch (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe19c8) in operator delete(void*, unsigned long)
+==1375327==HINT: if you don't care about these errors you may set ASAN_OPTIONS=alloc_dealloc_mismatch=0
+==1375327==ABORTING

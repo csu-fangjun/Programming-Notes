@@ -1,0 +1,16 @@
+=================================================================
+==1375855==ERROR: AddressSanitizer: alloc-dealloc-mismatch (operator new [] vs operator delete) on 0x602000000010
+    #0 0x7ff2ef5049c8 in operator delete(void*, unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe19c8)
+    #1 0x5584db912854 in main /root/fangjun/open-source/.n/compilers/code/asan/ex5.cc:7
+    #2 0x7ff2ef053b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #3 0x5584db912759 in _start (/root/fangjun/open-source/.n/compilers/code/asan/ex5+0x759)
+
+0x602000000010 is located 0 bytes inside of 8-byte region [0x602000000010,0x602000000018)
+allocated by thread T0 here:
+    #0 0x7ff2ef503608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x5584db912847 in main /root/fangjun/open-source/.n/compilers/code/asan/ex5.cc:6
+    #2 0x7ff2ef053b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+SUMMARY: AddressSanitizer: alloc-dealloc-mismatch (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe19c8) in operator delete(void*, unsigned long)
+==1375855==HINT: if you don't care about these errors you may set ASAN_OPTIONS=alloc_dealloc_mismatch=0
+==1375855==ABORTING

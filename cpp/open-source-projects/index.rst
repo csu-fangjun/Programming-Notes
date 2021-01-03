@@ -19,3 +19,4 @@ C++ Open Source Projects
   abseil
   pcre
   grpc
+  folly

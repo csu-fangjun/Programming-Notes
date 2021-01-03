@@ -44,7 +44,6 @@ Exercise 1
 
 .. literalinclude:: ./code/day1/ex1/boot.s
   :caption: boot.s
-  :language: asm
   :linenos:
 
 .. literalinclude:: ./code/day1/ex1/Makefile
@@ -97,7 +96,6 @@ Print a string after booting.
 
 .. literalinclude:: ./code/day1/ex2/boot.s
   :caption: boot.s
-  :language: asm
   :linenos:
 
 Exercise 3
@@ -107,7 +105,6 @@ Specify the link address so that we can define variables.
 
 .. literalinclude:: ./code/day1/ex3/boot.s
   :caption: boot.s
-  :language: asm
   :linenos:
 
 .. literalinclude:: ./code/day1/ex3/Makefile
@@ -144,7 +141,6 @@ We load sector 2 to ``0x500``.
 
 .. literalinclude:: ./code/day1/ex4/boot.s
   :caption: boot.s
-  :language: asm
   :linenos:
 
 .. literalinclude:: ./code/day1/ex4/Makefile

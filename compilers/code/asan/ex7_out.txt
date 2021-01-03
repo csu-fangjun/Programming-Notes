@@ -1,0 +1,18 @@
+=================================================================
+==1376062==ERROR: AddressSanitizer: alloc-dealloc-mismatch (operator new [] vs operator delete) on 0x602000000010
+    #0 0x7fccbc6ed9c8 in operator delete(void*, unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe19c8)
+    #1 0x55c27566fa5f in std::default_delete<int>::operator()(int*) const /usr/include/c++/7/bits/unique_ptr.h:78
+    #2 0x55c27566fa5f in std::unique_ptr<int, std::default_delete<int> >::~unique_ptr() /usr/include/c++/7/bits/unique_ptr.h:263
+    #3 0x55c27566fa5f in main /root/fangjun/open-source/.n/compilers/code/asan/ex7.cc:6
+    #4 0x7fccbc23cb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #5 0x55c27566f8d9 in _start (/root/fangjun/open-source/.n/compilers/code/asan/ex7+0x8d9)
+
+0x602000000010 is located 0 bytes inside of 12-byte region [0x602000000010,0x60200000001c)
+allocated by thread T0 here:
+    #0 0x7fccbc6ec608 in operator new[](unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0608)
+    #1 0x55c27566fa35 in main /root/fangjun/open-source/.n/compilers/code/asan/ex7.cc:6
+    #2 0x7fccbc23cb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+SUMMARY: AddressSanitizer: alloc-dealloc-mismatch (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe19c8) in operator delete(void*, unsigned long)
+==1376062==HINT: if you don't care about these errors you may set ASAN_OPTIONS=alloc_dealloc_mismatch=0
+==1376062==ABORTING

@@ -1,0 +1,20 @@
+=================================================================
+==1375172==ERROR: AddressSanitizer: attempting double-free on 0x602000000010 in thread T0:
+    #0 0x7fcac73529c8 in operator delete(void*, unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe19c8)
+    #1 0x559ad45c6869 in main /root/fangjun/open-source/.n/compilers/code/asan/ex2.cc:6
+    #2 0x7fcac6ea1b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #3 0x559ad45c6759 in _start (/root/fangjun/open-source/.n/compilers/code/asan/ex2+0x759)
+
+0x602000000010 is located 0 bytes inside of 4-byte region [0x602000000010,0x602000000014)
+freed by thread T0 here:
+    #0 0x7fcac73529c8 in operator delete(void*, unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe19c8)
+    #1 0x559ad45c685c in main /root/fangjun/open-source/.n/compilers/code/asan/ex2.cc:5
+    #2 0x7fcac6ea1b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+previously allocated by thread T0 here:
+    #0 0x7fcac7351448 in operator new(unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0448)
+    #1 0x559ad45c684c in main /root/fangjun/open-source/.n/compilers/code/asan/ex2.cc:4
+    #2 0x7fcac6ea1b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+SUMMARY: AddressSanitizer: double-free (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe19c8) in operator delete(void*, unsigned long)
+==1375172==ABORTING

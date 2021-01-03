@@ -1,0 +1,10 @@
+
+=================================================================
+==1376801==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 4 byte(s) in 1 object(s) allocated from:
+    #0 0x7f0c2683a448 in operator new(unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0448)
+    #1 0x56205f9057f7 in main /root/fangjun/open-source/.n/compilers/code/asan/ex8.cc:6
+    #2 0x7f0c2638ab96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+SUMMARY: AddressSanitizer: 4 byte(s) leaked in 1 allocation(s).

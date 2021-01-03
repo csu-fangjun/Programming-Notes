@@ -1,0 +1,16 @@
+=================================================================
+==1375345==ERROR: AddressSanitizer: alloc-dealloc-mismatch (operator new vs free) on 0x602000000010
+    #0 0x7fab958bc7a8 in __interceptor_free (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xde7a8)
+    #1 0x55be182c283f in main /root/fangjun/open-source/.n/compilers/code/asan/ex4.cc:7
+    #2 0x7fab9540eb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #3 0x55be182c2749 in _start (/root/fangjun/open-source/.n/compilers/code/asan/ex4+0x749)
+
+0x602000000010 is located 0 bytes inside of 4-byte region [0x602000000010,0x602000000014)
+allocated by thread T0 here:
+    #0 0x7fab958be448 in operator new(unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0448)
+    #1 0x55be182c2837 in main /root/fangjun/open-source/.n/compilers/code/asan/ex4.cc:6
+    #2 0x7fab9540eb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+SUMMARY: AddressSanitizer: alloc-dealloc-mismatch (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xde7a8) in __interceptor_free
+==1375345==HINT: if you don't care about these errors you may set ASAN_OPTIONS=alloc_dealloc_mismatch=0
+==1375345==ABORTING
