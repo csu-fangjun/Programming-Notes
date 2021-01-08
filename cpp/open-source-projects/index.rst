@@ -5,6 +5,8 @@ C++ Open Source Projects
 .. toctree::
   :maxdepth: 3
 
+  dlmalloc
+  mimalloc
   gperftools
   benchmark
   onnxruntime

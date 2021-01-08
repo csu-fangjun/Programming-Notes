@@ -73,4 +73,4 @@ FetchContent_Declare
 ====================
 
 For pybind11, The generated scripts are in
-``build/_deps/pybind11-subbuild/CMakeFiles/pybind11-populate.dir``.
+``build/_deps/pybind11-subbuild/CMakeFiles/pybind11-populate.dir`` (build.make).

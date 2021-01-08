@@ -9,7 +9,8 @@ IDs
   ``blockDim.x``, ``blockDim.y`` and ``blockDim.z``. That is, the maximum
   ``threadIdx.x`` is ``blockDim.x - 1``
 
-- ``blockIdx.x``, ``blockIdx.y``, ``blockIdx.z``
+- ``blockIdx.x``, ``blockIdx.y``, ``blockIdx.z``. Maximum ``blockIdx.x``
+  is ``gridDim.x``.
 
 Thread bolck
 ------------
@@ -42,6 +43,11 @@ Kernel invocation
 .. code-block::
 
   kernel<<<num_blocks, threads_per_block>>>
+
+  kernel<<<num_blocks, threads_per_block, 0, stream>>>
+  // where 0 means shared memory size
+  // stream is cudaStream_t
+
 
 Memory Hierarchy
 ----------------

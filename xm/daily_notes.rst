@@ -1,3 +1,44 @@
+2021-01-08
+----------
+
+TODOs
+~~~~~
+
+- Statistical Language Models Based on Neural Networks
+
+    PhD thesis: `<https://www.fit.vutbr.cz/~imikolov/rnnlm/thesis.pdf>`_
+
+2021-01-07
+----------
+
+- Scalable parallel programming with CUDA
+
+    `<https://dl.acm.org/doi/pdf/10.1145/1365490.1365500>`_
+
+    A magazine paper.
+
+TODOs
+~~~~~
+
+- Course on CUDA Programming on NVIDIA GPUs, July 22-26, 2019
+
+  `<https://people.maths.ox.ac.uk/gilesm/cuda/>`_
+
+- Efficient Estimation of Word Representations in Vector Space
+
+    This is the paper for Word2Vec.
+
+    `<https://pub-tools-public-publication-data.storage.googleapis.com/pdf/41224.pdf>`_
+
+- Distributed representations of words and phrases and their compositionality
+
+    `<https://papers.nips.cc/paper/2013/file/9aa42b31882ec039965f3c4923ce901b-Paper.pdf>`_
+
+- A Neural Probabilistic Language Model
+
+    `<http://www-labs.iro.umontreal.ca/~felipe/IFT6010-Automne2011/resources/tp3/bengio03a.pdf>`_
+
+
 2020-12-30
 ----------
 
