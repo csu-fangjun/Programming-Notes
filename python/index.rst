@@ -23,6 +23,7 @@ Python
   todo
   c_api
   c_api_long_object
+  c_api_exercise
   flask
   anaconda
   jupyter

@@ -236,27 +236,27 @@ TODO
 
     - macOS::
 
-      if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-        ...
-      endif()
+        if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+          // ...
+        endif()
 
     - Linux::
 
-      if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
-        ...
-      endif()
+        if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+          // ...
+        endif()
 
     - Windows::
 
-      if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+        if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
 
     - To detect x86 CPU::
 
-      if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "x86")
-        add_definitions(-DARCH_X86)
-      endif()
-        ...
-      endif()
+        if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "x86")
+          add_definitions(-DARCH_X86)
+        endif()
+          ...
+        endif()
 
     This is how it defines ``arraysize``::
 

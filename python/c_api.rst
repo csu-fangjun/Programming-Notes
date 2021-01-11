@@ -4,10 +4,12 @@ C API
 
 1. how to define a module
 2. how to assign attributes to a module
+
    - list
    - tuple
    - dict
    - callable
+
 3. how to define a new class
 
 
