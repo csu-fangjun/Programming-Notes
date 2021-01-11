@@ -1,3 +1,13 @@
+2021-01-09
+----------
+
+TODOs
+~~~~~
+
+- PEP 465 -- A dedicated infix operator for matrix multiplication
+
+    `<https://legacy.python.org/dev/peps/pep-0465/>`_
+
 2021-01-08
 ----------
 
