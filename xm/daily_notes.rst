@@ -1,3 +1,46 @@
+2021-01-15
+----------
+
+TODOs
+~~~~~
+
+- The Python 2.3 Method Resolution Order
+
+    `<https://www.python.org/download/releases/2.3/mro/>`_
+
+- `<https://docs.python.org/3/library/functions.html#property>`_
+
+    How to define a property in Python?
+
+2021-01-14
+----------
+
+TODOs
+~~~~~
+
+- `<https://github.com/tiny-dnn/tiny-dnn>`_
+
+2021-01-13
+----------
+
+- PEP 353 -- Using ssize_t as the index type
+
+    `<https://www.python.org/dev/peps/pep-0353/>`_
+
+TODOs
+~~~~~
+
+- Parsing arguments and building values
+
+    `<https://docs.python.org/3/c-api/arg.html>`_
+
+- PEP 384 -- Defining a Stable ABI
+
+    `<https://www.python.org/dev/peps/pep-0384/>`_.
+
+    It lists a subset of APIs.
+
+
 2021-01-09
 ----------
 

@@ -60,10 +60,26 @@ PyMODINIT_FUNC PyInit_spam() {
     return nullptr;
 
   // the Python name for the exception object is `spam.error`
-  spam_error = PyErr_NewException("spam.error", nullptr, nullptr);
+  //
+  // name:  module.classname
+  spam_error = PyErr_NewException("spam.Error", nullptr, nullptr);
+  /* class Error(builtins.Exception):
+   *   ....
+   *   pass
+   *
+   * The class is defined in `spam` module
+   */
+
   // we should check that spam_error is not NULL !
   Py_INCREF(spam_error);
 
   PyModule_AddObject(m, "error", spam_error);
+  // in python, we use
+  // import spam
+  // error = spam.error
+  // assert error.__module__ == 'spam'
+  //
+  // help(spam.error)
+
   return m;
 }

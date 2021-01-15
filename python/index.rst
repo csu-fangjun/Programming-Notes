@@ -27,3 +27,5 @@ Python
   flask
   anaconda
   jupyter
+  attributes
+  descriptors

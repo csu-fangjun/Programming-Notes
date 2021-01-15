@@ -34,3 +34,11 @@ Refer to
   :caption: ex2/setup.py
   :language: python
   :linenos:
+
+C API Notes
+-----------
+
+.. literalinclude:: ./code/c_api_2/sample_code/object.cc
+  :caption: sample_code/ojbect.cc
+  :language: cpp
+  :linenos:
