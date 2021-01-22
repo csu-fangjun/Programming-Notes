@@ -1,3 +1,40 @@
+2021-01-22
+----------
+
+TODOs
+~~~~~
+
+- An Introduction to Arithmetic Coding
+
+    `<https://www.cs.cmu.edu/~aarti/Class/10704/Intro_Arith_coding.pdf>`_, a tutorial paper.
+
+2021-01-21
+----------
+
+TODOs
+~~~~~
+
+- Discriminative Training of Hidden Markov Models
+
+    `<http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.16.9409&rep=rep1&type=pdf>`_
+
+    A Ph.D thesis.
+
+- Large scale discriminative training for speech recognition
+
+    `<http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.399.7723&rep=rep1&type=pdf>`_
+
+    A paper by Dan in 2000.
+
+- Minimum Bayes-risk automatic speech recognition
+
+    `<https://sci-hub.se/10.1006/csla.2000.0138>`_, a paper in 2000.
+
+- Machine Learning Paradigms for Speech Recognition: An Overview
+
+    `<http://cvsp.cs.ntua.gr/courses/patrec/slides_material2018/slides-2018/DengLi_MLParadigms-SpeechRecogn-AnOverview_TALSP13.pdf>`_
+
+
 2021-01-15
 ----------
 

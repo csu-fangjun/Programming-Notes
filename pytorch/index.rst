@@ -12,3 +12,4 @@ PyTorch
   open-source
   extension
   show-info
+  internals
