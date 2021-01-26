@@ -2,6 +2,33 @@
 The ``with`` Statement
 ======================
 
+contextlib.contextmanager
+-------------------------
+
+See `<https://docs.python.org/3/library/contextlib.html#contextlib.contextmanager>`_
+
+An example from PyTorch
+
+.. code-block:: python
+
+  import contextlib
+  @contextlib.contextmanager
+  def device(idx):
+      prev_idx = torch._C._cuda_getDevice()
+      torch._C._cuda_setDevice(idx)
+      yield
+      torch._C._cuda_setDevice(prev_idx)
+
+  @contextlib.contextmanager
+  def _dummy_ctx():
+      yield
+
+.. literalinclude:: ./code/generator_test.py
+  :caption: generator_test.py
+  :language: python
+  :linenos:
+
+
 References
 ----------
 
