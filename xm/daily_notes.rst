@@ -1,3 +1,13 @@
+2021-01-27
+----------
+
+TODOs
+~~~~~
+
+- Cooperative Groups: Flexible CUDA Thread Programming
+
+    `<https://developer.nvidia.com/blog/cooperative-groups/>`_
+
 2021-01-22
 ----------
 

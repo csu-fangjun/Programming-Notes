@@ -11,8 +11,9 @@ def f():
 
 def test():
     a = f()
-
+    assert a.__class__.__name__ == 'generator'
     assert str(type(a)) == "<class 'generator'>"
+
     assert next(a) == 3
 
 
@@ -32,3 +33,8 @@ def test2():
 if __name__ == '__main__':
     test()
     test2()
+'''
+Output:
+end test2
+end g
+'''
