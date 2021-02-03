@@ -1,6 +1,41 @@
 Internals
 =========
 
+Sparse tensors
+--------------
+
+
+- Added sparse support for asin and neg functions, updated log1p
+
+    `<https://github.com/pytorch/pytorch/pull/44028>`_
+
+- Roadmap for PyTorch Sparse Tensors
+
+    `<https://github.com/Quansight-Labs/rfcs/tree/pearu/rfc0005/RFC0003-sparse-roadmap>`_
+
+- The state of PyTorch tensor layouts support
+
+    `<https://github.com/Quansight-Labs/rfcs/blob/pearu/rfc0005/RFC0003-sparse-roadmap/SparseSupportState.md>`
+
+- torch.sparse improvements - tracking issue
+
+    `<https://github.com/pytorch/pytorch/issues/44634>`_
+
+- Sparse-sparse matrix multiplication (CPU/CUDA)
+
+    `<https://github.com/pytorch/pytorch/pull/39526>`_
+
+    It lists two papers:
+
+      - Sparse GPU Kernels for Deep Learning
+      - The State of Sparsity in Deep Neural Networks
+
+- Efficient Storage Scheme for n-Dimensional Sparse Array: GCRS/GCCS
+
+  A paper: `<https://www.researchgate.net/profile/Md_Abu_Hanif_Shaikh/publication/312167966_Efficient_storage_scheme_for_n-dimensional_sparse_array_GCRSGCCS/links/5874260708aebf17d3b0cf47.pdf>`_
+
+
+
 autograd
 --------
 
