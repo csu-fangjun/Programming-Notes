@@ -5,6 +5,7 @@ PyTorch
 .. toctree::
   :maxdepth: 1
 
+  aten
   c10
   install
   tensor

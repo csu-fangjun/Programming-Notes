@@ -1,6 +1,8 @@
 Internals
 =========
 
+
+
 Sparse tensors
 --------------
 
@@ -47,7 +49,193 @@ autograd
     `Automatic differentiation in PyTorch <https://openreview.net/pdf?id=BJJsrmfCZ>`_
     and the corresponding slide is `<https://autodiff-workshop.github.io/slides/Paszke_ad_in_pytorch.pdf>`_.
 
+cuda
+----
 
+- ``git checkout v0.1.1``
+
+In `csrc/cuda/Module.cpp`:
+
+  - To create a tuple::
+
+    PyObject *args = PyTuple_New(0);
+    bool args_ok = PyTuple_Size(args) == 1;
+    Py_DECREF(args);
+
+  - It wraps some common methods: ``cudaSetDevice``, ``cudaGetDevice``, ``cudaGetDeviceCount``
+
+  - How to extend the module ``torch.cuda``?
+
+    (1) Get the module object ``torch.cuda``
+
+    (2) Get its ``__dict__`` object
+
+    (3) Extend ``__dict__``
+
+    .. code-block:: c++
+
+      PyObject *torch_module = PyImport_ImportModule("torch.cuda");
+      if (!torch_module) {
+        THPUtils_setError("class loader couldn't access torch module");
+        return NULL;
+      }
+      PyObject* module_dict = PyModule_GetDict(torch_module);
+      return PyBool_FromLong(THCPModule_initCuda(module_dict));
+
+      //
+      ASSERT_TRUE(PyDict_SetItemString(module_dict, "hasMagma", PyBool_FromLong(true)) != -1);
+
+
+How to define a new type?
+-------------------------
+
+Refer to ``torch/csrc/generator.{h,cpp}``.
+
+1. The C struct looks like:
+
+   .. code-block:: cpp
+
+    struct THPGenerator {
+      PyObject_HEAD
+      THGenerator *cdata;
+    };
+
+2. Define a constructor for it:
+
+   .. code-block:: cpp
+
+    static PyObject * THPGenerator_pynew(PyTypeObject *type, PyObject *args, PyObject *kwargs)
+    {
+      HANDLE_TH_ERRORS
+      if ((args && PyTuple_Size(args) != 0) || kwargs) {
+        THPUtils_setError("torch.Generator doesn't constructor doesn't accept any arguments");
+        return NULL;
+      }
+      THPGeneratorPtr self = (THPGenerator *)type->tp_alloc(type, 0);
+      self->cdata = THGenerator_new();
+
+      return (PyObject*)self.release();
+      END_HANDLE_TH_ERRORS
+    }
+
+  The function name is irrelevant, but the type and the number of arguments matter. Basically,
+  it uses ``tp_alloc`` to allocate memory and then set its struct members accordingly.
+
+3. Define a destructor for it:
+
+   .. code-block:: cpp
+
+      static void THPGenerator_dealloc(THPGenerator* self)
+      {
+        THGenerator_free(self->cdata);
+        Py_TYPE(self)->tp_free((PyObject*)self);
+      }
+
+  Inside the destructor, it first frees any memory associated with its members that are allocated in
+  the constructor. After that, it uses ``tp_free`` to free the memory of this object.
+
+4. Define a type for it:
+
+   0 in ``PyVarObject_HEAD_INIT(NULL, 0)`` means variable size is 0, which is the common
+   case.
+
+   ``tp_basicsize`` is the size of the struct, which is used in ``tp_alloc``.
+
+   ``tp_itemsize`` is 0 since it is neither a list nor a tuple.
+
+   We only need to set its ``tp_dealloc`` and ``tp_new`` (besides ``tp_flags``).
+
+
+   .. code-block:: cpp
+
+      extern PyObject *THPGeneratorClass;
+
+      PyTypeObject THPGeneratorType = {
+        PyVarObject_HEAD_INIT(NULL, 0)
+        "torch.C.Generator",                   /* tp_name */
+        sizeof(THPGenerator),                   /* tp_basicsize */
+        0,                                     /* tp_itemsize */
+        (destructor)THPGenerator_dealloc,     /* tp_dealloc */
+        0,                                     /* tp_print */
+        0,                                     /* tp_getattr */
+        0,                                     /* tp_setattr */
+        0,                                     /* tp_reserved */
+        0,                                     /* tp_repr */
+        0,                                     /* tp_as_number */
+        0,                                     /* tp_as_sequence */
+        0,                                     /* tp_as_mapping */
+        0,                                     /* tp_hash  */
+        0,                                     /* tp_call */
+        0,                                     /* tp_str */
+        0,                                     /* tp_getattro */
+        0,                                     /* tp_setattro */
+        0,                                     /* tp_as_buffer */
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE, /* tp_flags */
+        NULL,                                  /* tp_doc */
+        0,                                     /* tp_traverse */
+        0,                                     /* tp_clear */
+        0,                                     /* tp_richcompare */
+        0,                                     /* tp_weaklistoffset */
+        0,                                     /* tp_iter */
+        0,                                     /* tp_iternext */
+        0,   /* will be assigned in init */    /* tp_methods */
+        0,   /* will be assigned in init */    /* tp_members */
+        0,                                     /* tp_getset */
+        0,                                     /* tp_base */
+        0,                                     /* tp_dict */
+        0,                                     /* tp_descr_get */
+        0,                                     /* tp_descr_set */
+        0,                                     /* tp_dictoffset */
+        0,                                     /* tp_init */
+        0,                                     /* tp_alloc */
+        THPGenerator_pynew,                    /* tp_new */
+      };
+
+5. Define a function to initialize it.
+
+   What the initialization does it to associate this new type with a module.
+
+   Inside the initialization func, it calls ``PyType_Ready`` for the type,
+   increase its reference count, and assign it as an attribute of a module.
+
+   .. code-block:: cpp
+
+      bool THPGenerator_init(PyObject *module)
+      {
+        THPGeneratorClass = (PyObject*)&THPGeneratorType;
+        if (PyType_Ready(&THPGeneratorType) < 0)
+          return false;
+        Py_INCREF(&THPGeneratorType);
+        PyModule_AddObject(module, "Generator", (PyObject *)&THPGeneratorType);
+        return true;
+      }
+
+6. Define some helper functions for the type.
+
+   .. code-block:: cpp
+
+    bool THPGenerator_Check(PyObject *obj)
+    {
+      return Py_TYPE(obj) == &THPGeneratorType;
+    }
+
+    PyObject * THPGenerator_newObject()
+    {
+      // TODO: error checking
+      THPObjectPtr args = PyTuple_New(0); // NOTE(fangjun): Memory leak!
+      return PyObject_Call((PyObject*)&THPGeneratorType, args, NULL);
+    }
+
+  Sometimes it is helpful to define a is subclass function:
+
+  .. code-block:: cpp
+
+    bool THPStorage_(IsSubclass)(PyObject *storage)
+    {
+      return PyObject_IsSubclass((PyObject*)Py_TYPE(storage), (PyObject*)&THPStorageType);
+    }
+
+  It uses ``PyObject_IsSubclass``.
 
 alpha release
 -------------

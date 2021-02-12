@@ -20,8 +20,32 @@ URLs:
 .. _Another link to Google: https://google.com
 
 
+.. code-block::
+
+    .. _recommend-saving-models:
+
+    Recommended approach for saving a model
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 See `<https://sublime-and-sphinx-guide.readthedocs.io/en/latest/references.html>`_
 for adding links.
+
+Cross references in code
+------------------------
+
+.. code-block::
+
+  :class:`Variable`
+  :class:`tuple`
+  :meth:`~Function.forward`
+  :attr:`~Variable.needs_input_grad`
+  :any:`python:None`
+  :mod:`torch.nn`
+  :mod:`~torch.nn`
+  :func:`~Function.backward`
+  :class:`torch.Tensor`
+
 
 References
 ----------
