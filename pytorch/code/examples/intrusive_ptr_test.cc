@@ -22,6 +22,9 @@ private:
   int a_;
 };
 
+// +8 because there are 4-bytes for padding
+static_assert(sizeof(Foo) == sizeof(c10::intrusive_ptr_target) + 8);
+
 void test_intrusive_ptr_impl() {
   {
       // compile time error since this constructor is private
@@ -31,6 +34,7 @@ void test_intrusive_ptr_impl() {
   // Note that there is only one way to construct
   // an c10::intrusive_ptr
   {
+    // it calls `new Foo(10)` internally in c10::make_intrusive
     c10::intrusive_ptr<Foo> foo = c10::make_intrusive<Foo>(10);
     static_assert(sizeof(c10::intrusive_ptr<Foo>) == 8,
                   "it should contain only a single pointer.");
@@ -43,13 +47,14 @@ void test_intrusive_ptr_impl() {
     assert(!foo == false);
     assert(foo.defined() == true); // refcount > 0
 
-    // ususally we should not call release directly
+    // usually we should not call release directly
     // if we indeed need to call release, remember to
     // use reclaim()
     Foo *p = foo.release();
 
     // now foo is empty
     assert(foo.use_count() == 0);
+    assert((bool)foo == false);
     assert(!foo == true);
     assert(foo.use_count() == 0);
     assert(foo.weak_use_count() == 0);
@@ -118,7 +123,7 @@ void test_weak_intrusive_ptr() {
 
 } // namespace
 
-void test_intrusive_ptr() {
+void Testintrusive_ptr() {
   test_intrusive_ptr_impl();
   test_weak_intrusive_ptr();
 }

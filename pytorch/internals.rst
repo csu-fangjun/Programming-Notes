@@ -2,6 +2,11 @@ Internals
 =========
 
 
+indexing in c++
+----------------
+
+`<https://pytorch.org/cppdocs/notes/tensor_indexing.html>`_
+
 
 Sparse tensors
 --------------

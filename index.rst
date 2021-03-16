@@ -19,6 +19,7 @@ Refer to :ref:`sphinx_install` page for how to build this website.
    :caption: Table of Contents
 
    xm/index
+   mace/index
    android/index
    sphinx/index
    ssh/index

@@ -94,10 +94,10 @@ To find where ``torch`` is installed::
 
 ``cpp_extension`` is in ``torch.utils/cpp_extension.py``.
 
-If ``ninja`` is availabe, it is used by default. The environment
+If ``ninja`` is available, it is used by default. The environment
 variable ``MAX_JOBS`` can be used to limit the number of CPUs
 for ``ninja``. ``ninja --version`` can be used to check
-the availabilitity of ``ninja``.
+the availability of ``ninja``.
 
 .. code-block::
 

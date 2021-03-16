@@ -29,3 +29,5 @@ Python
   jupyter
   attributes
   descriptors
+  click
+  context_manager

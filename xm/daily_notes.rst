@@ -1,3 +1,26 @@
+2021-03-10
+----------
+
+TODOs
+~~~~~
+
+1. k2/csrc/ragged_test.cu, remove line line 2017 in `PrefixTest`. That variable is never
+   used and is copied from a previous code block.
+
+2. What are the new features in C++17?
+
+    `<https://stackoverflow.com/questions/38060436/what-are-the-new-features-in-c17>`_
+
+3. Changes between C++14 and C++17 DIS
+
+    `<https://isocpp.org/files/papers/p0636r0.html>`_
+
+4. Structured bindings
+
+    `<http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf>`_
+
+    `<http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0144r2.pdf>`_
+
 2021-01-27
 ----------
 

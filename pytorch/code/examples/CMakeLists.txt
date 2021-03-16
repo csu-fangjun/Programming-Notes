@@ -35,7 +35,7 @@ add_library(hello SHARED
   device.cc
   # cuda.cc
   # hello.cc
-  # intrusive_ptr_test.cc
+  intrusive_ptr_test.cc
   # tensor.cc
   )
 set_property(TARGET hello PROPERTY CXX_STANDARD 14)
