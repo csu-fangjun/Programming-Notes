@@ -6,6 +6,15 @@ TODOs
 C++
 ----
 
+- The "Empty Member" C++ Optimization
+
+    `<http://www.cantrip.org/emptyopt.html>`_
+
+- Templates and Inheritance Interacting in C++
+
+  `<https://www.informit.com/articles/article.aspx?p=31473&seqNum=2>`_
+
+
 Boost
 ^^^^^
 

@@ -10,3 +10,4 @@ C++11
   sfina
   regex
   random
+  align

@@ -3,7 +3,110 @@
 #include <optional>
 #include <string>
 
-int main() {
+struct S {
+  S() { std::cout << "constructor called\n"; }
+  S(const S &) { std::cout << "copy constructor called\n"; }
+  S &operator=(const S &) {
+    std::cout << "copy assignment operator called\n";
+    return *this;
+  }
+
+  S(S &&) { std::cout << "move constructor called\n"; }
+  S &operator=(S &&) {
+    std::cout << "move assignment operator called\n";
+    return *this;
+  }
+
+  ~S() { std::cout << "destructor called\n"; }
+};
+
+void test() {
+  {
+    std::optional<S> op; // print nothing
+  }
+
+  {
+    std::optional<S> op;
+    op = S{};
+    // constructor called
+    // move constructor called
+    // destructor called
+    // destructor called
+  }
+  std::cout << "--end case2\n";
+  {
+    std::optional<S> op(std::in_place);
+    // constructor called
+    // destructor called
+  }
+  std::cout << "--end case3\n";
+  {
+    S s;
+    std::optional<S> op(s);
+    // constructor called
+    // copy constructor called
+    // destructor called
+    // destructor called
+  }
+  std::cout << "--end case4\n";
+  {
+    S s;
+    std::optional<S> op(std::move(s));
+    // constructor called
+    // move constructor called
+    // destructor called
+    // destructor called
+  }
+  std::cout << "--end case5\n";
+  {
+    std::optional<S> op1(S{});
+    std::optional<S> op2(S{});
+    op1 = op2;
+    // constructor called
+    // move constructor called
+    // destructor called
+    //
+    // constructor called
+    // move constructor called
+    // destructor called
+    //
+    // copy assignment operator called
+    // destructor called
+    // destructor called
+  }
+  std::cout << "--end case6\n";
+  {
+    std::optional<S> op1;
+    std::optional<S> op2(S{});
+    op1 = std::move(op2);
+    assert(op1.has_value());
+    assert(op2.has_value());
+    // constructor called
+    // move constructor called
+    // destructor called
+    //
+    // move constructor called
+    // destructor called
+    // destructor called
+  }
+  std::cout << "--end case7\n";
+  {
+    std::optional<S> op;
+    op.emplace();
+    // constructor called
+    // destructor called
+  }
+}
+
+void test0() {
+  std::optional<int32_t> op;
+  assert(!op);
+  assert(op == std::nullopt);
+  assert(op.has_value() == false);
+  assert(op.value_or(-10) == -10);
+}
+
+void test1() {
   std::optional<std::string> s1("hello");
   std::optional<std::string> s2;
   s2 = std::move(s1);
@@ -41,4 +144,10 @@ int main() {
 
   s2 = {};
   assert(s2.has_value() == false);
+}
+int main() {
+  test();
+  test0();
+  test1();
+  return 0;
 }
