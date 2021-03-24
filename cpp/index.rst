@@ -32,4 +32,5 @@ C++ Programming
   crt
   exception
   ebo
+  gdb
 

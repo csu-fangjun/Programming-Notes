@@ -7,4 +7,5 @@ CUDA Programming
   cmake
   basics
   references
+  install
 

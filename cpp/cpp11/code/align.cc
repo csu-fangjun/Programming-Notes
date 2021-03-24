@@ -35,6 +35,13 @@ struct Buf {
   typename std::aligned_storage<sizeof(S), alignof(S)>::type b[2];
 };
 
+template <size_t alignment, size_t size> struct AlignedArray {
+  alignas(alignment) char buf[size];
+};
+
+static_assert(sizeof(AlignedArray<4, 10>) == 12, "");
+static_assert(alignof(AlignedArray<4, 10>) == 4, "");
+
 int main() {
   Buf buf;
   new (&buf.b[0]) S(10, 20);

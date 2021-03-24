@@ -11,3 +11,4 @@ C++11
   regex
   random
   align
+  type_traits

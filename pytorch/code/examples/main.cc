@@ -8,7 +8,8 @@ int main() {
   // TEST(hello);
   // TEST(tensor);
   // TEST(cuda);
-  TEST(intrusive_ptr);
+  // TEST(intrusive_ptr);
   // TEST(Device);
+  TEST(ArrayRef)
   return 0;
 }

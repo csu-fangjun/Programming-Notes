@@ -6,9 +6,9 @@ Extensions
 hello world (cpu)
 -----------------
 
-.. code-block::
+.. code-block:: cpp
+
   :caption: hello.cc
-  :language: cpp
 
   #include <torch/extension.h>
 
@@ -21,9 +21,9 @@ hello world (cpu)
     m.def("sigmoid", &sigmoid, "sigmoid test");
   }
 
-.. code-block::
+.. code-block:: python
+
   :caption: setup.py
-  :language: python
 
   from setuptools import setup, Extension
   from torch.utils import cpp_extension

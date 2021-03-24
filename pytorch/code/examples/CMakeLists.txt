@@ -37,6 +37,7 @@ add_library(hello SHARED
   # hello.cc
   intrusive_ptr_test.cc
   # tensor.cc
+  array_ref_test.cc
   )
 set_property(TARGET hello PROPERTY CXX_STANDARD 14)
 

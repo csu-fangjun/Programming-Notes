@@ -7,3 +7,5 @@ Notes at Xiami
     daily_notes
     todo
     paper_reading
+    lhotse
+    rnnlm

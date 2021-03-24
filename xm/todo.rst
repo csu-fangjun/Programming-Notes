@@ -2,6 +2,13 @@
 TODOs
 =====
 
+Transformer
+----------
+
+- `<http://nlp.seas.harvard.edu/2018/04/03/attention.html>`_
+
+    A blog article about **Attention is All you Need**
+
 
 C++
 ----
