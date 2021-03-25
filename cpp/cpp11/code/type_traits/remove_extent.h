@@ -3,6 +3,7 @@
 #include <cstdint>  // std::size_t
 
 #include "is_same.h"
+#include "remove_reference.h"
 
 namespace kk {
 
@@ -31,5 +32,12 @@ static_assert(is_same_v<int, remove_extent_t<int[3]>>);
 static_assert(is_same_v<int[3], remove_extent_t<int[][3]>>);
 static_assert(is_same_v<int[2], remove_extent_t<int[1][2]>>);
 static_assert(is_same_v<int[5][6], remove_extent_t<int[8][5][6]>>);
+
+// CAUTION
+static_assert(is_same_v<const char (&)[3], remove_extent_t<decltype("ab")>>);
+
+// CAUTION
+static_assert(
+    is_same_v<const char, remove_extent_t<remove_reference_t<decltype("ab")>>>);
 
 }  // namespace kk

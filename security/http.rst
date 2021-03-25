@@ -129,5 +129,16 @@ Line ending is ``0x130x10`` (carriage return 0x13, line feed 0x10, CRLF)
   100  2381  100  2381    0     0  23943      0 --:--:-- --:--:-- --:--:-- 24050
   * Connection #0 to host www.baidu.com left intact
 
+cookie
+^^^^^^
 
+1. Use EditThisCookie to copy the cookies for a site to a file
+2. Use curl to download a file with cookie
 
+.. code-block::
+
+  curl -SL --cookie my_cookie.txt -o 'output_filename.tar.gz' 'https://some.url.com/xxx.tar.gz'
+
+- ``-S``: Show error
+- ``-L``: support redirect
+- ``-s``: Be silent

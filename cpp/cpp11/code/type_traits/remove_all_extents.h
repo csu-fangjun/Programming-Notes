@@ -2,6 +2,7 @@
 #include <cstdint>  // std::size_t
 
 #include "is_same.h"
+#include "remove_reference.h"
 
 namespace kk {
 template <typename T>
@@ -30,4 +31,8 @@ static_assert(is_same_v<int, remove_all_extents_t<int[2][3][4][5]>>);
 // CAUTION
 static_assert(
     is_same_v<const char (&)[3], remove_all_extents_t<decltype("ab")>>);
+
+static_assert(
+    is_same_v<const char,
+              remove_all_extents_t<remove_reference_t<decltype("ab")>>>);
 }  // namespace kk
