@@ -35,6 +35,22 @@ Use default settings:
 
 Config file is ``/etc/v2ray/config.json``.
 
+Block domain/address/website
+-----------------------------
+
+Change ``/etc/v2ray/config.json``. Changes the ``routing`` section.
+
+.. code-block::
+
+  {
+    "type": "field",
+    "domain": [
+      "domain:example.com",
+      "domain:example2.com"
+    ],
+    "outboundTag": "blocked"
+  },
+
 References
 ----------
 

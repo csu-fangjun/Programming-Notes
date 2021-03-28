@@ -57,4 +57,9 @@ Rename local branch
    git push -u origin <new_name>
    git push origin --delete <old_name>
 
+Useful commands
+---------------
 
+  git checkout -b create_some_new_branch
+  git fetch some_origin
+  git merge --ff some_origin/some_branch

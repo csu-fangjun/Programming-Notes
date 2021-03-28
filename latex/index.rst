@@ -10,4 +10,5 @@ LaTex
   docker
   todo
   references
+  texlive
 

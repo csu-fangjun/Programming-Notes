@@ -9,7 +9,8 @@ func main() {
 	  Integer is not implicitly converted to bool in go!
 	*/
 
-	// parenthese are not needed for conditions!
+	// parenthesis are not needed for conditions!
+	// It is removed by gofmt automatically if you add it!
 	if 7%2 == 1 {
 		fmt.Println("7 is even")
 	} else {

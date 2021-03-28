@@ -26,7 +26,7 @@ func main() {
 	//
 	// equivalent to
 	//  var a int = 100
-	// ro
+	// or
 	//  var a = 100
 	a := 100
 }
