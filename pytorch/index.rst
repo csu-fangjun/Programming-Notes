@@ -14,3 +14,4 @@ PyTorch
   extension
   show-info
   internals
+  ddp

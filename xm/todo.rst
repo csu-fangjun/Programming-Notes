@@ -2,6 +2,11 @@
 TODOs
 =====
 
+Flashlight
+----------
+
+- `<https://github.com/facebookresearch/flashlight/blob/master/flashlight/app/asr/augmentation/SoundEffect.cpp>`_
+
 Transformer
 ----------
 
@@ -20,6 +25,34 @@ C++
 - Templates and Inheritance Interacting in C++
 
   `<https://www.informit.com/articles/article.aspx?p=31473&seqNum=2>`_
+
+- Simple C++11 metaprogramming
+
+  `<https://www.boost.org/doc/libs/1_75_0/libs/mp11/doc/html/simple_cxx11_metaprogramming.html>`_
+
+- Simple C++11 metaprogramming, part 2
+
+  `<https://www.boost.org/doc/libs/1_75_0/libs/mp11/doc/html/simple_cxx11_metaprogramming_2.html>`_
+
+- `<https://github.com/boostorg/mp11>`_
+
+    Mp11, a C++11 metaprogramming library
+
+- Searching for Types in Parameter Packs
+
+  `<http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4115.html>`_
+  by Stephan T. Lavavej
+
+- Variable Templates For Type Traits
+
+  `<http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3854.htm>`_
+
+- Template Metaprogramming Part 2
+
+  `<https://nilsdeppe.com/posts/tmpl-part2>`_
+
+
+
 
 
 Boost

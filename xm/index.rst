@@ -9,3 +9,4 @@ Notes at Xiami
     paper_reading
     lhotse
     rnnlm
+    tokenizer

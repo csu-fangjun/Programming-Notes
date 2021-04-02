@@ -2,6 +2,10 @@
 TODO
 ====
 
+- `<https://github.com/facebookresearch/habitat-sim/blob/master/src/cmake/FindAssimp.cmake>`_
+
+    How to write a ``FindXXX.cmake``.
+
 - https://github.com/CLIUtils/cmake
 
     A set of cmake modules to assist in building code
