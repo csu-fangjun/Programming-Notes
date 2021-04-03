@@ -2,6 +2,10 @@
 Language Models
 ===============
 
+- `<https://web.stanford.edu/~jurafsky/slp3/3.pdf>`_
+
+    A chapter from a book, which describes the details of n-gram.
+
 TODO
 ----
 
