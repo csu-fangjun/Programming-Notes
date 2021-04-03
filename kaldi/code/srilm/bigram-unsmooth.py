@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 #
+# Author: Fangjun Kuang <csukuangfj@gmail.com>
+#
 # This file demonstrates how an arpa file is computed
 # from ngram counts
 
@@ -7,7 +9,7 @@ import math
 
 
 def get_unigram():
-    # CAUTION: <s> is not used in compute prob for unigram
+    # CAUTION: <s> is not used in computing prob for unigram
     unigram = {}
     unigram['<s>'] = 5
     unigram['hello'] = 3
