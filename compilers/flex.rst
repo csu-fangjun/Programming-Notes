@@ -126,17 +126,14 @@ count lines
 
 .. literalinclude:: ./code/flex/count_lines/count.l
   :caption: count.l
-  :language: c
   :linenos:
 
 .. literalinclude:: ./code/flex/count_lines/count2.l
   :caption: count2.l
-  :language: c
   :linenos:
 
 .. literalinclude:: ./code/flex/count_lines/count3.l
   :caption: count3.l
-  :language: c
   :linenos:
 
 .. note::
@@ -146,7 +143,6 @@ count lines
 
 .. literalinclude:: ./code/flex/detect/detect.l
   :caption: detect.l
-  :language: flex
   :linenos:
 
 Basics

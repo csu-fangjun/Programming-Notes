@@ -40,7 +40,7 @@ It prints::
 
 and generates one file ``go.mod``
 
-.. literalinclude:: ./code/ex2/greetings/go_1.mod
+.. literalinclude:: ./code/ex2/hello/go_1.mod
   :caption: go.mod
   :linenos:
 
@@ -60,7 +60,7 @@ Use ``go mod`` to update ``go.mod`` so that we can find
 
 ``go.mod`` is updated to:
 
-.. literalinclude:: ./code/ex2/greetings/go_2.mod
+.. literalinclude:: ./code/ex2/hello/go_2.mod
   :caption: go.mod
   :linenos:
 
@@ -73,7 +73,7 @@ Then run ``go mod tidy`` inside the ``hello`` directory
 
 ``go.mod`` is updated to:
 
-.. literalinclude:: ./code/ex2/greetings/go_3.mod
+.. literalinclude:: ./code/ex2/hello/go_3.mod
   :caption: go.mod
   :linenos:
 

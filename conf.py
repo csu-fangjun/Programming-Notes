@@ -81,3 +81,8 @@ html_context = {
     "github_version": "master",  # Version
     "conf_py_path": "/",  # Path in the checkout to the docs root
 }
+
+# make latex
+# then
+# cd _build/latex; latexmk xelatex programmingnotes.tex
+latex_engine = 'xelatex'

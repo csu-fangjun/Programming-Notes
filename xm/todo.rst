@@ -14,7 +14,7 @@ Flashlight
 - `<https://github.com/facebookresearch/flashlight/blob/master/flashlight/app/asr/augmentation/SoundEffect.cpp>`_
 
 Transformer
-----------
+-----------
 
 - `<http://nlp.seas.harvard.edu/2018/04/03/attention.html>`_
 

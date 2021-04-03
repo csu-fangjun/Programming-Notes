@@ -19,4 +19,5 @@ Kaldi
   todo
   lattices
   srilm
+  arpa
 
