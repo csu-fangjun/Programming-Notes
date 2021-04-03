@@ -138,7 +138,7 @@ Third example, which contains two lines:
   math.log10(1/2700) = -3.4313637641589874
   math.pow(2700, 1/(3+5)) = 2.6848527412884793
 
-  The first sentence contains 3 words and and the second contains 5 words.
+  The first sentence contains 3 words and the second contains 5 words.
   Note that </s> is counted as one extra word for each sentence.
 
 .. code-block::
