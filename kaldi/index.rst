@@ -18,4 +18,5 @@ Kaldi
   egs
   todo
   lattices
+  srilm
 

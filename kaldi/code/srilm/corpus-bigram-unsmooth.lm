@@ -1,0 +1,30 @@
+
+\data\
+ngram 1=6
+ngram 2=14
+
+\1-grams:
+-0.5797836	</s>
+-99	<s>	-99
+-0.8016323	bar	-99
+-0.6766936	foo	-99
+-0.8016323	hello	-99
+-0.6766936	world	-99
+
+\2-grams:
+-0.2218488	<s> foo
+-0.69897	<s> hello
+-0.69897	<s> world
+-0.4771213	bar </s>
+-0.4771213	bar foo
+-0.4771213	bar hello
+-0.60206	foo </s>
+-0.60206	foo bar
+-0.60206	foo hello
+-0.60206	foo world
+-0.4771213	hello </s>
+-0.1760913	hello world
+-0.30103	world </s>
+-0.30103	world bar
+
+\end\

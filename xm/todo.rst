@@ -2,6 +2,12 @@
 TODOs
 =====
 
+- A guide to recurrent neural networks and backpropagation
+
+  `<https://wiki.eecs.yorku.ca/course_archive/2016-17/F/6327/_media/rn_dallas.pdf>`_.
+
+  backpropagation through time, a detailed guide
+
 Flashlight
 ----------
 
