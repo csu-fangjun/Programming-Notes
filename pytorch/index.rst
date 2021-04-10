@@ -15,3 +15,6 @@ PyTorch
   show-info
   internals
   ddp
+  torchscript
+  useful_functions
+  transformers

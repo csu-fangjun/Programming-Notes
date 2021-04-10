@@ -31,3 +31,4 @@ Python
   descriptors
   click
   context_manager
+  example_setup

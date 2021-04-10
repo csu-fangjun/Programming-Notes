@@ -10,3 +10,4 @@ Notes at Xiami
     lhotse
     rnnlm
     tokenizer
+    attention

@@ -24,3 +24,20 @@ Go to `<https://www.anaconda.com/products/individual#linux>`_ and download the p
 
   # to disable the automatic activation of base
   conda config --set auto_activate_base false
+
+``~/.my-anaconda3.sh``:
+
+.. code-block::
+
+  #!/usr/bin/env bash
+
+  eval "$(/root/fangjun/software/anaconda3/2020.11/bin/conda shell.bash hook)"
+  # conda init
+  # conda config --set auto_activate_base false
+
+Usage::
+
+  . ~/.my-anaconda3.sh
+  conda env --list
+  conda activate <some_env_name>
+

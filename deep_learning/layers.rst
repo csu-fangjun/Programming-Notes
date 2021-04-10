@@ -1,7 +1,6 @@
 
-Normalization
-=============
-
+nn.Module in PyTorch
+====================
 
 Weight Normalization
 --------------------
@@ -20,7 +19,7 @@ BatchNormalization
   on for a single dimension.
 
 .. literalinclude:: ./code/batch_norm.py
-  :caption: batch_norm.py
+  :caption: code/batch_norm.py
   :language: python
   :linenos:
 
@@ -28,7 +27,7 @@ LayerNorm
 ---------
 
 .. literalinclude:: ./code/layer_norm.py
-  :caption: layer_norm
+  :caption: code/layer_norm.py
   :language: python
   :linenos:
 
@@ -36,3 +35,29 @@ LayerNorm
 - Its ``mean`` and ``var`` do not depend on batch size
 - The shape for computing ``mean`` and ``var`` is specified by
   the user
+- Each element of x in (x-mu) has a weight. That is, the weight shape equals
+  to that of x.
+
+Linear
+------
+
+Note that its weight shape is ``(out_dim, in_dim)``, its input shape
+is ``(N, *, in_dim)``, and it uses a transposed ``weigth`` during
+computation.
+
+.. literalinclude:: ./code/linear_layer.py
+  :caption: code/linear_layer.py
+  :language: python
+  :linenos:
+
+NLLLOSS
+-------
+Negative(N) Log (L) Likelihood(L) Loss.
+
+Note that its input is from ``log_softmax``.
+
+
+.. literalinclude:: ./code/nll_loss.py
+  :caption: code/nll_loss.py
+  :language: python
+  :linenos:

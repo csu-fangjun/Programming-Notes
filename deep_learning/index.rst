@@ -7,4 +7,4 @@ Deep Learning
 
   quantization
   frameworks
-  normalization
+  layers

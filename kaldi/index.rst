@@ -20,4 +20,5 @@ Kaldi
   lattices
   srilm
   arpa
+  tokenizer
 

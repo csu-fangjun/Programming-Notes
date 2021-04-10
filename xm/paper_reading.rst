@@ -22,3 +22,7 @@ Paper Reading Notes
 - Effective Approaches to Attention-based Neural Machine Translation
   :cite:`luong2015effective`
 
+  It describes what is attention.
+
+- Learning phrase representations using RNN encoder-decoder for statistical machine translation
+  :cite:`cho2014learning`

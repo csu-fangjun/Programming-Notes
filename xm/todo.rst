@@ -2,11 +2,30 @@
 TODOs
 =====
 
+- `<https://sphinx-gallery.github.io/stable/tutorials/index.html>`_
+
+    Write notebook style documentation for k2!!
+
+    `<https://github.com/pytorch/tutorials/blob/master/intermediate_source/char_rnn_classification_tutorial.py>`_
+    is an example and it is rendered as
+    `<https://pytorch.org/tutorials/intermediate/char_rnn_classification_tutorial>`_.
+
 - A guide to recurrent neural networks and backpropagation
 
   `<https://wiki.eecs.yorku.ca/course_archive/2016-17/F/6327/_media/rn_dallas.pdf>`_.
 
   backpropagation through time, a detailed guide
+
+- Implement the following and use PyTorch to check it:
+
+    - Linear layer, weight norm
+    - RNN, LSTM, GRU
+    - Optimizers: SGD, Adam, RMSProp
+
+- Read the code of earlier OpenFST
+- Read the code of FST algorithms in k2, especially ``k2.intersect_dense_pruned``
+
+- Read the blog article "Understanding LSTM Networks" `<https://colah.github.io/posts/2015-08-Understanding-LSTMs/>`_
 
 Flashlight
 ----------
