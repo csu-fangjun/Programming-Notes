@@ -56,8 +56,21 @@ Negative(N) Log (L) Likelihood(L) Loss.
 
 Note that its input is from ``log_softmax``.
 
-
 .. literalinclude:: ./code/nll_loss.py
   :caption: code/nll_loss.py
+  :language: python
+  :linenos:
+
+MultiheadAttention
+------------------
+
+See
+
+  - `<https://pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html>`_
+  - `<https://pytorch.org/docs/stable/_modules/torch/nn/modules/activation.html#MultiheadAttention>`_
+  - `<https://github.com/pytorch/pytorch/blob/master/torch/nn/functional.py#L4633>`_
+
+.. literalinclude:: ./code/multihead_attention.py
+  :caption: code/multihead_attention.py
   :language: python
   :linenos:
