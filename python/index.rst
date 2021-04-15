@@ -32,3 +32,12 @@ Python
   click
   context_manager
   example_setup
+  logging
+  decimal
+  pathlib
+  pytest
+  functions
+  soundfile
+  useful_functions
+  iterator
+  subprocess

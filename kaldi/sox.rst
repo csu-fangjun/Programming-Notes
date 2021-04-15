@@ -11,7 +11,7 @@ Generate a wav file:
 - ``-n`` mean null file; it has no input.
 - ``-r`` means ``--rate``, sample rate in Hz
 - ``-b`` means ``--bits``, number of bits for each sample
-- ``synth`` means synthesise
+- ``synth`` means synthesize
 
   1 means 1 second; ``sine 100`` means 100 Hz sine wave.
 

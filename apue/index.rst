@@ -8,3 +8,4 @@ Advanced Programming in Unix Environment
   errno
   file_io
   references
+  pipe

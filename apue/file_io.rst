@@ -38,6 +38,3 @@ System Calls
 
 It contains help information for ``STDIN_FILENO``, ``STDOUT_FILENO``,
 and ``STDERR_FILENO``; they are defined in ``<unistd.h>``.
-
-
-

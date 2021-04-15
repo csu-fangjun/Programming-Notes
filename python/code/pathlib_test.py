@@ -17,6 +17,8 @@ def main():
 
     assert str(Path('a') / 'b' / 'c') == 'a/b/c'
 
+    assert Path('abc/def.txt').stem == 'def'
+
 
 if __name__ == '__main__':
     main()
