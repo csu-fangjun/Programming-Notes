@@ -2,6 +2,37 @@
 TODOs
 =====
 
+- Read the blog article `<https://danmackinlay.name/notebook/autodiff.html>`_
+
+    It summarizes various projects that implement autodiff.
+
+    See also `<https://github.com/hips/autograd>`_
+
+- Read generators in Python and write some example code
+
+    - `<https://wiki.python.org/moin/Generators>`_
+
+    - PEP 255 -- Simple Generators `<https://www.python.org/dev/peps/pep-0255/>`_
+
+
+
+- The ``glob`` module in Python
+- The ``datetime`` module in Python.
+- The ``str`` class in Python.
+
+- PyTorch source code
+
+    The ``cpu`` and ``cuda`` methods of ``torch::Tensor`` are
+    defined in ``torch/autograd/templates/python_variable_methods.cpp``
+
+    1. What does ``torch._C._nn._parse_to(*args, **kwargs)`` do ? See
+       line 797 in torch/nn/modules/module.py
+
+    2. How is ``torch.Tensor.to`` implemented? See help(torch.Tensor.to)
+
+
+- Read `<https://github.com/prabhuomkar/pytorch-cpp>`_ to learn PyTorch C++ programming
+
 - Read CS 61: Systems Programming and Machine Organization (2018)
 
     `<https://cs61.seas.harvard.edu/site/2018/>`_

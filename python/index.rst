@@ -40,4 +40,9 @@ Python
   soundfile
   useful_functions
   iterator
+  generator
   subprocess
+  weakref
+  str
+  set
+  os
