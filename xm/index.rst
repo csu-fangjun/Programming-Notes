@@ -11,3 +11,4 @@ Notes at Xiami
     rnnlm
     tokenizer
     attention
+    people

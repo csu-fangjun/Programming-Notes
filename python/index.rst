@@ -46,3 +46,4 @@ Python
   str
   set
   os
+  print

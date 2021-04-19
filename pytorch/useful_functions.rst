@@ -62,6 +62,8 @@ See
 
 .. literalinclude:: ./code/useful_functions/chunk.py
   :caption: code/useful_functions/chunk.py
+  :language: python
+  :linenos:
 
 pad
 ---
@@ -69,5 +71,50 @@ pad
 See
 
 - `<https://pytorch.org/docs/stable/nn.functional.html>`_
+
+.. literalinclude:: ./code/useful_functions/pad.py
+  :caption: code/useful_functions/pad.py
+  :language: python
+  :linenos:
+
+as_tensor
+---------
+
+See
+
+- `<https://pytorch.org/docs/stable/generated/torch.as_tensor.html#torch.as_tensor>`_
+
+It is used in `<https://github.com/pytorch/pytorch/blob/master/torch/utils/data/sampler.py#L180>`_.
+
+.. literalinclude:: ./code/useful_functions/as_tensor.py
+  :caption: code/useful_functions/as_tensor.py
+  :language: python
+  :linenos:
+
+torch.Generator
+---------------
+
+See
+
+- `<https://pytorch.org/docs/stable/generated/torch.Generator.html>`_
+
+It is used in `<https://github.com/pytorch/pytorch/blob/master/torch/utils/data/sampler.py#L114>`_.
+
+Note its ``seed()`` method also changes self.
+
+.. literalinclude:: ./code/useful_functions/generator.py
+  :caption: code/useful_functions/generator.py
+  :language: python
+  :linenos:
+
+randint
+-------
+
+See
+
+- `<https://pytorch.org/docs/stable/generated/torch.randint.html#torch.randint>`_
+
+.. literalinclude:: ./code/useful_functions/randint.py
+  :caption: code/useful_functions/randint.py
   :language: python
   :linenos:

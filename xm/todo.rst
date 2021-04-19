@@ -2,6 +2,26 @@
 TODOs
 =====
 
+- Read two books:
+
+    1. Python essential reference
+    2. Python cookbook
+
+- Read this paper:
+
+    "The Inside Story on Shared Libraries and Dynamic Loading"
+    `<http://www.dabeaz.com/papers/CiSE/c5090.pdf>`_
+
+- Read coroutines in Python
+
+    - PEP 342 -- Coroutines via Enhanced Generators
+      `<https://www.python.org/dev/peps/pep-0342/>`_
+
+    - A Curious Course on Coroutines and Concurrency
+      `<http://dabeaz.com/coroutines/>`_
+
+
+
 - Read the blog article `<https://danmackinlay.name/notebook/autodiff.html>`_
 
     It summarizes various projects that implement autodiff.
