@@ -118,3 +118,21 @@ See
   :caption: code/useful_functions/randint.py
   :language: python
   :linenos:
+
+nn.Sequential
+-------------
+
+See
+
+- `<https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html>`_
+
+Its constructor accepts ``*args``, which can either be an OrderedDict
+or an iterable of nn.Modules.
+
+See `torch/nn/modules/container.py`.
+
+
+.. literalinclude:: ./code/useful_functions/sequential.py
+  :caption: code/useful_functions/sequential.py
+  :language: python
+  :linenos:

@@ -3,7 +3,7 @@ References
 ==========
 
 TeX
-===
+---
 
 - `<http://www.ctex.org/documents/shredder/src/texbook.pdf>`_
 
@@ -16,7 +16,7 @@ TeX
     The source code is also available.
 
 LaTeX
-=====
+-----
 
 - LaTeX: A document preparation system, User’s guide and reference manual
 

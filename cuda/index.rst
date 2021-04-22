@@ -8,4 +8,5 @@ CUDA Programming
   basics
   references
   install
+  nvtx
 

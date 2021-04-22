@@ -2,6 +2,12 @@
 TODOs
 =====
 
+- Read
+
+    - `<https://github.com/tensorflow/tensorflow/tree/master/tensorflow/compiler/xla>`_
+    - `<https://www.tensorflow.org/xla>`_
+    - `<https://github.com/pytorch/xla>`_
+
 - Read two books:
 
     1. Python essential reference

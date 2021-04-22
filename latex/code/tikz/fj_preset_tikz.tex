@@ -1,0 +1,60 @@
+\usepackage[tightpage, active]{preview}
+
+\setlength{\PreviewBorder}{1pt} % the space between the final figure and the border
+
+\usepackage{amsmath}
+
+\usepackage[table]{xcolor}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+
+%===========================================
+%   Tikz
+%-------------------------------------------
+\usepackage{tikz}
+\usetikzlibrary{%
+  arrows,%
+  backgrounds,%
+  calc,%
+  chains,%
+  decorations.pathmorphing, % for snaking lines
+  decorations.pathreplacing,%
+  fit,%
+  matrix,%
+  positioning,%
+  scopes,%
+  shapes.geometric,%
+  shapes,%
+  shapes.symbols,%
+  spy,%
+  trees%
+}
+
+\usepackage{pgfplots}
+%\pgfplotsset{compat=1.13}
+
+% refer to
+% ftp://ftp.rrzn.uni-hannover.de/pub/mirror/tex-archive/graphics/pgf/contrib/tikz-3dplot/tikz-3dplot_documentation.pdf
+\usepackage{tikz-3dplot}
+
+%===========================================
+%   preview environment
+%   this should be added after all packages
+%-------------------------------------------
+\PreviewEnvironment{forest}
+\PreviewEnvironment{tikzpicture}
+\PreviewEnvironment{equation}
+\PreviewEnvironment{equation*}
+\PreviewEnvironment{tabular}
+
+%===========================================
+%  TikZ settings 
+%-------------------------------------------
+\tikzstyle{my arrow}=[%
+  ->,
+  >=stealth',
+  shorten >=1pt % if enabled, the arrow head will not touch the edges
+]

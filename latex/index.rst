@@ -11,4 +11,5 @@ LaTex
   todo
   references
   texlive
+  tikz
 
