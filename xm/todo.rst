@@ -2,6 +2,22 @@
 TODOs
 =====
 
+- Read `<https://stuff.mit.edu/afs/athena/contrib/tex-contrib/beamer/pgf-1.01/doc/generic/pgf/version-for-tex4ht/en/pgfmanualse15.html>`_
+  for how to use foreach in tikz
+
+- Read `<https://texample.net/tikz/examples/cycle/>`_
+
+    - How to use foreach in tikz
+    - How to use variables in tikz
+
+
+- Learn the commandline tools of imagemagic
+
+    - convert
+    - mogrify
+
+  It is useful in latex/tikz.rst
+
 - Read
 
     - `<https://github.com/tensorflow/tensorflow/tree/master/tensorflow/compiler/xla>`_

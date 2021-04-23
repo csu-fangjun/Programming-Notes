@@ -12,4 +12,5 @@ LaTex
   references
   texlive
   tikz
+  tikz-examples
 

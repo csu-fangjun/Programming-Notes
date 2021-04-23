@@ -1,0 +1,44 @@
+\documentclass{article}
+
+\input{../fj_preset_tikz}
+
+% \setlength{\PreviewBorder}{1cm} % the space between the final figure and the border
+
+\begin{document}
+
+%==============================
+% Page 0
+%------------------------------
+
+\begin{tikzpicture}
+\draw (0, 0) -- (1, 0) -- (1, 1) -- (0, 1) -- cycle;
+\draw (0, 0) circle (1pt)
+      (1, 0) circle (1pt)
+      (1, 1) circle (1pt)
+      (0, 1) circle (1pt);
+\end{tikzpicture}
+
+%==============================
+% Page 1
+%------------------------------
+\begin{tikzpicture}
+\draw[thick,my arrow] (0, 0) -- (4.5, 0) node [anchor=north] {x};
+\draw[thick,my arrow] (0, 0) -- (0, 4.5) node [anchor=east] {y};
+
+\foreach \i in {0, 1, 2, 3, 4}
+{
+  \draw (\i cm, 1pt) -- (\i cm, -1pt) node[anchor=north] {$\i$};
+  \draw (1pt, \i cm) -- (-1pt, \i cm) node[anchor=east] {$\i$};
+}
+
+\iffalse
+\foreach \x in {0, 1, 2, 3, 4}
+  \draw (\x cm, 1pt) -- (\x cm, -1pt) node[anchor=north] {$\x$};
+
+\foreach \y in {0, 1, 2, 3, 4}
+  \draw (1pt, \y cm) -- (-1pt, \y cm) node[anchor=east] {$\y$};
+\fi
+\end{tikzpicture}
+
+\end{document}
+
