@@ -9,4 +9,5 @@ CUDA Programming
   references
   install
   nvtx
+  examples
 

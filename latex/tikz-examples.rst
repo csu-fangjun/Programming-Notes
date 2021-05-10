@@ -144,3 +144,18 @@ This example shows:
     :figwidth: 500px
 
     code/tikz/multi/multi-2.png
+
+Example 3
+---------
+This is the first example from the tikz manual.
+It shows:
+
+  - How to use control points
+  - How to use circle
+  - How to use arc. Note how similar is the syntax with circle.
+    We need a center for the circle and a starting point for the arc.
+  - How to define styles inside tikzpicture environment
+  - How to define styles outside tikzpicture environment
+
+    Note that: ``\tikzstyle`` is deprecated, use ``\tikzset`` instead.
+

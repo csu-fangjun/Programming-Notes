@@ -1,7 +1,7 @@
 
 #include <iostream>
-#include <vector>
 #include <string>
+#include <vector>
 
 __global__ void hello_id(int *p) {
 
@@ -10,14 +10,14 @@ __global__ void hello_id(int *p) {
 }
 
 int main() {
-  int num_blocks= 5;
+  int num_blocks = 5;
   int threads_per_block = 3;
   int n = num_blocks * threads_per_block;
 
   std::vector<int> v(n);
-  int* d;
+  int *d;
   cudaError_t ret = cudaMalloc(&d, sizeof(int) * n);
-  ret  = cudaMemcpy(d, v.data(), sizeof(int)*n, cudaMemcpyHostToDevice);
+  ret = cudaMemcpy(d, v.data(), sizeof(int) * n, cudaMemcpyHostToDevice);
 
   // inside the kernel,
   // gridDim.x == num_blocks
@@ -32,10 +32,10 @@ int main() {
   // gridDim.x limits the range of blockIdx.x
   // blockDim.x limits the range of threadIdx.x
 
-  ret  = cudaMemcpy(v.data(), d, sizeof(int)*n, cudaMemcpyDeviceToHost);
+  ret = cudaMemcpy(v.data(), d, sizeof(int) * n, cudaMemcpyDeviceToHost);
 
   std::cout << "host v.data(): " << v.data() << "\n"; // 0x1f09e10
-  std::cout << "device d: " << d << "\n"; // 0x7fc2a6c00000
+  std::cout << "device d: " << d << "\n";             // 0x7fc2a6c00000
 
   std::string sep = "";
   for (auto i : v) {
@@ -45,4 +45,7 @@ int main() {
   std::cout << "\n";
 
   ret = cudaFree(d);
+  /* Print
+  0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+   */
 }

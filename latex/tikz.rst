@@ -88,6 +88,29 @@ dvisvgm
 See `<https://man.archlinux.org/man/extra/texlive-bin/dvisvgm.1.en>`_
 for available options.
 
+Basics
+------
+
+Length unit: 1pt, 1cm. Default is 1cm.
+
+To draw a circle, there are 3 ways to specify the radius:
+
+  - ``\draw (0, 0) circle (1pt);``
+  - ``\draw (0, 0) circle [radius=1pt];``
+  - ``\draw (0, 0) circle [x radius=1pt, y radius=1pt];``
+
+To draw an arc, we need its starting point, start angle, end angle and radius:
+
+  - ``\draw (1, 0) arc [start angle=0, end angle=45, radius=1cm]``
+
+Thickness of a line: ultra thin, very thin, thin, semithic, thick, very thick, ultra thick.
+
+Dash style of a line: loosely dashed, dashed, densely dashed, loosely dotted, dotted, densely dotted
+
+Color: ``green!20!white`` means ``20%`` green and ``80%`` white. See the ``xcolor`` package.
+
+``filldraw``: ``\filldraw[fill=green!20!white, draw=green!50!black]``
+
 References
 ----------
 

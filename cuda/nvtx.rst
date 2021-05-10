@@ -15,3 +15,9 @@ Refer to `k2/k2/csrc/nvtx.h` for a minimal usage case of NVTX.
 
 After generating a file ``report1.qdrep``, we can copy it to macOS and open it with NVIDIA NsightSystems.
 
+.. code-block::
+
+  nsys profile -o master ./mmi_att_transformer_train.py --use-ali-model=0 --full-libri=0
+  # It generates master.qdrep.
+  # It we don't specify the output filename, it is Report1.qdrep by default
+

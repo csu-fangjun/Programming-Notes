@@ -1,18 +1,17 @@
 
-#include<vector>
-#include<cassert>
+#include <cassert>
+#include <vector>
 
-void cpu_vec_add(const int* a, const int* b, int* c, int n) {
+void cpu_vec_add(const int *a, const int *b, int *c, int n) {
   for (int i = 0; i != n; ++i) {
     c[i] = a[i] + b[i];
   }
 }
 
-__global__ void gpu_vec_add(const int* a, const int* b, int* c, int n){
+__global__ void gpu_vec_add(const int *a, const int *b, int *c, int n) {
   // we use a 1-d grid, 1-d block
   int id = blockDim.x * blockIdx.x + threadIdx.x;
-  if (id < n)
-  {
+  if (id < n) {
     c[id] = a[id] + b[id];
   }
 }
@@ -28,7 +27,7 @@ int main() {
   std::vector<int> ground_truth(n);
   for (int i = 0; i != n; ++i) {
     a[i] = i;
-    b[i] = 2*i;
+    b[i] = 2 * i;
   }
 
   cpu_vec_add(a.data(), b.data(), ground_truth.data(), n);
@@ -40,20 +39,19 @@ int main() {
   cudaMalloc(&db, sizeof(int) * n);
   cudaMalloc(&dc, sizeof(int) * n);
 
-
-  cudaMemcpy(da, a.data(), sizeof(int)*n, cudaMemcpyHostToDevice);
-  cudaMemcpy(db, b.data(), sizeof(int)*n, cudaMemcpyHostToDevice);
+  cudaMemcpy(da, a.data(), sizeof(int) * n, cudaMemcpyHostToDevice);
+  cudaMemcpy(db, b.data(), sizeof(int) * n, cudaMemcpyHostToDevice);
 
   gpu_vec_add<<<num_blocks, threads_per_block>>>(da, db, dc, n);
 
-  cudaMemcpy(c.data(), dc, sizeof(int)*n, cudaMemcpyDeviceToHost);
+  cudaMemcpy(c.data(), dc, sizeof(int) * n, cudaMemcpyDeviceToHost);
 
   cudaFree(da);
   cudaFree(db);
+  cudaFree(dc);
 
-  for(int i = 0; i !=n; ++i) {
+  for (int i = 0; i != n; ++i) {
     assert(c[i] == ground_truth[i]);
   }
-  cudaProfilerStop();
   return 0;
 }

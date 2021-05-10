@@ -12,6 +12,12 @@ IDs
 - ``blockIdx.x``, ``blockIdx.y``, ``blockIdx.z``. Maximum ``blockIdx.x``
   is ``gridDim.x``.
 
+There is no ``threadDim``!!!
+
+For the maximum value of ``gridDim.x``, ``blockDim.x``, refer to
+``Table 15. Technical Specifications per Compute Capability``
+from CUDA C++ Programming Guide `<https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html>`_.
+
 Thread bolck
 ------------
 

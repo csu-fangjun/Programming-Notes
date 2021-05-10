@@ -74,3 +74,18 @@ See
   :caption: code/multihead_attention.py
   :language: python
   :linenos:
+
+KLDIVLOSS
+---------
+
+See 
+
+- `<https://pytorch.org/docs/stable/generated/torch.nn.KLDivLoss.html#torch.nn.KLDivLoss>`_
+- `<https://pytorch.org/docs/stable/nn.functional.html#kl-div>`_
+
+``target * (log(target) - predicted)``, where ``predicted`` is in log scale.
+
+Refer to `<http://hanj.cs.illinois.edu/cs412/bk3/KL-divergence.pdf>`_ for the definition
+of KL-divergence. The definition does not use log scale, so it is ``p*log(p/q) = p*(log(p) - log(q))``.
+But in our case, ``q`` is already in log scale and ``p`` is the target label.
+If it does not use label smoothing, then p is 1 and the resulting loss is negative log-likelihood loss.

@@ -2,6 +2,10 @@
 TODOs
 =====
 
+- Read `<https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html>`_
+
+    For CUDA programming.
+
 - Read `<https://stuff.mit.edu/afs/athena/contrib/tex-contrib/beamer/pgf-1.01/doc/generic/pgf/version-for-tex4ht/en/pgfmanualse15.html>`_
   for how to use foreach in tikz
 
