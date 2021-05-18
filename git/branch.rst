@@ -63,3 +63,5 @@ Useful commands
   git checkout -b create_some_new_branch
   git fetch some_origin
   git merge --ff some_origin/some_branch
+  git merge --squash bugfix # merge bugfix to the current branch
+

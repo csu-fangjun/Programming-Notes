@@ -2,6 +2,33 @@
 TODOs
 =====
 
+- Read this `<https://github.com/pytorch/pytorch/pull/50633/files>`_
+
+    It shows how to generate a build matrix dynamically from a Python script!
+
+    `<https://github.com/pytorch/pytorch/pull/50633>`_
+
+- gperftools
+
+    `<https://github.com/gperftools/gperftools>`_
+    used in google's SentencePiece.
+
+- Read `<https://leimao.github.io/blog/Byte-Pair-Encoding/>`_
+
+    And his blog `<https://leimao.github.io/blog/>`_
+
+    And this `<https://github.com/rsennrich/subword-nmt>`_
+
+    And `<https://towardsdatascience.com/byte-pair-encoding-the-dark-horse-of-modern-nlp-eb36c7df4f10>`_
+
+- `<https://cs.stanford.edu/~quocle/>`_
+
+    He gives two tutorial lectures to deep learning. Read his notes.
+
+      - `<https://cs.stanford.edu/~quocle/tutorial1.pdf>`_
+      - `<https://cs.stanford.edu/~quocle/tutorial2.pdf>`_
+      - `<https://www.trivedigaurav.com/blog/quoc-les-lectures-on-deep-learning/>`_
+
 - Read `<https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html>`_
 
     For CUDA programming.

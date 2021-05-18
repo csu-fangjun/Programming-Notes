@@ -131,3 +131,7 @@ for more details.
   # From the above page
   # conda install -c k2-fsa click
 
+
+Refer to `<https://github.com/Anaconda-Platform/anaconda-client/issues/501#issuecomment-470742898>`_
+in case upload fails without printing any messages.
+

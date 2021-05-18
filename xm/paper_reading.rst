@@ -2,6 +2,11 @@
 Paper Reading Notes
 ===================
 
+- Japanese and korean voice search
+  :cite:`schuster2012japanese`
+
+    It proposes word piece.
+
 
 - Listen, attend and spell
   :cite:`chan2015listen`

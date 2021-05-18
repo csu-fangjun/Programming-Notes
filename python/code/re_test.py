@@ -29,10 +29,33 @@ def test1():
     assert m.end() == 5
     assert m.span() == (2, 5)
     assert m.group() == 'abb'
+    assert m.group(0) == 'abb'
+
+
+def test2():
+    a = re.escape('a b')
+    assert isinstance(a, str)
+    assert a == 'a\ b'
+
+    a = re.escape('a.b')
+    assert a == 'a\.b'
+
+
+def test3():
+    # sub()
+    a = re.compile('ab')
+    s = 'abdef'
+    b = a.sub(repl='c', string=s)
+    assert b == 'cdef'
+
+    b = re.sub(pattern='ab', repl='c', string='abdef')
+    assert b == 'cdef'
 
 
 def main():
     test1()
+    test2()
+    test3()
 
 
 if __name__ == '__main__':

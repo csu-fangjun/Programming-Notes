@@ -16,3 +16,4 @@ Compilers
   cmake
   todo
   macros
+  install_gcc

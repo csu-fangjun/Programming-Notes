@@ -33,4 +33,5 @@ C++ Programming
   exception
   ebo
   gdb
+  tmux
 

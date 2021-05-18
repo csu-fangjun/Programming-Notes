@@ -61,6 +61,12 @@ Examples
   //.*|/\*([^*]|\*[^/])*\*+/
 
 
+Extensions
+----------
+
+See `<https://docs.python.org/3/library/re.html>`_
+
+It has the form ``(?...)``
 
 
 References

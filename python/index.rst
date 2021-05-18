@@ -47,3 +47,4 @@ Python
   set
   os
   print
+  unicode
