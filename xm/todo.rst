@@ -2,6 +2,25 @@
 TODOs
 =====
 
+- Learn the course `<https://www.ee.columbia.edu/~stanchen/spring16/e6870/>`_
+
+    Speech Recognition EECS E6870 — Spring 2016
+
+
+- Read `<http://ethen8181.github.io/machine-learning/>`_
+
+  Especially `<http://ethen8181.github.io/machine-learning/clustering/GMM/GMM.html>`_
+
+- Read "Context dependent modeling of phones in continuous speech using decision trees"
+
+    `<https://www.aclweb.org/anthology/H91-1051.pdf>`_
+
+- Read "Tree-based state tying for high accuracy modelling"
+
+    `<https://www.aclweb.org/anthology/H94-1062.pdf>`_
+
+    Written by Steve Young
+
 - Read this `<https://github.com/pytorch/pytorch/pull/50633/files>`_
 
     It shows how to generate a build matrix dynamically from a Python script!

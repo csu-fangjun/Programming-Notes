@@ -135,3 +135,22 @@ for more details.
 Refer to `<https://github.com/Anaconda-Platform/anaconda-client/issues/501#issuecomment-470742898>`_
 in case upload fails without printing any messages.
 
+
+miniconda
+==========
+
+Go to `<https://docs.conda.io/en/latest/miniconda.html>`_.
+
+.. code-block::
+
+  curl -SL -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+  chmod +x Miniconda3-latest-MacOSX-x86_64.sh
+  ./Miniconda3-latest-MacOSX-x86_64.sh
+  # install to $HOME/software/miniconda3
+
+.. code-block::
+
+  conda config --set auto_activate_base false
+  touch ~/.my-miniconda.sh
+  # and put the following to it
+  eval "$(/Users/fangjun/software/miniconda3/bin/conda shell.YOUR_SHELL_NAME hook)"

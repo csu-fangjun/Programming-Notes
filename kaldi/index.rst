@@ -21,4 +21,7 @@ Kaldi
   srilm
   arpa
   tokenizer
+  code-notes
+  gmm
+
 
