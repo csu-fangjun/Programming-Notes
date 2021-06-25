@@ -48,3 +48,5 @@ Python
   os
   print
   unicode
+  setup
+  argparse

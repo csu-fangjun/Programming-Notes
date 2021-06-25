@@ -2,10 +2,38 @@
 TODOs
 =====
 
+- Read `<https://github.com/google/sentencepiece/blob/master/python/test/sentencepiece_test.py>`_
+
+- Read `<https://distill.pub/2017/ctc/>`_
+
+    "Sequence Modeling With CTC" by Awni Hannun, who is also the author of GTN.
+
+- Read `<https://github.com/PyTorchLightning/pytorch-lightning>`_
+
+- Read `<https://github.com/OAID/Tengine>`_
+
+- Read `<https://google.github.io/eng-practices/review/reviewer/standard.html>`
+
+    Read `<https://google.github.io/styleguide/shellguide.html>`_
+
+    Read `<https://google.github.io/styleguide/>`_
+
+- Read "The Power of C++11 in CUDA 7"
+
+    `<https://developer.nvidia.com/blog/power-cpp11-cuda-7/>`_
+
+    `<https://eli.thegreenplace.net/2014/variadic-templates-in-c/>`_
+
+- `<https://parselmouth.readthedocs.io/en/stable/>`_
+  python interface to praat
+
+    `<https://textgridtools.readthedocs.io/en/stable/index.html>` for TextGrid in Python
+
+    And its paper: `<https://pure.mpg.de/rest/items/item_2627915/component/file_2627914/content>`_
+
 - Learn the course `<https://www.ee.columbia.edu/~stanchen/spring16/e6870/>`_
 
     Speech Recognition EECS E6870 — Spring 2016
-
 
 - Read `<http://ethen8181.github.io/machine-learning/>`_
 

@@ -33,6 +33,7 @@ Refer to :ref:`sphinx_install` page for how to build this website.
    tts/index
    git/index
    cpp/index
+   rust/index
    cuda/index
    algorithms/index
    apue/index

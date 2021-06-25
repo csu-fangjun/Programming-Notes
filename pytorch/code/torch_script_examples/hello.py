@@ -35,7 +35,7 @@ def test_trace():
 
 def test_script():
     model = MyModel()
-    # a script model can capture if/else, which a traced model cannot.
+    # a script model can capture if/else, while a traced model cannot.
     scripted_model = torch.jit.script(model)
     assert str(type(scripted_model)) == \
             "<class 'torch.jit._script.RecursiveScriptModule'>"
@@ -44,6 +44,7 @@ def test_script():
 
     x = torch.tensor([10, 20, 30])
     traced_model = torch.jit.trace(scripted_model, x)
+    print(traced_model.graph)
     print(traced_model.code)
 
 

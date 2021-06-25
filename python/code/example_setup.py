@@ -22,7 +22,7 @@ setup_info = dict(
 
     # Package info
     packages=find_packages(exclude=('test',)),
-    zip_safe=True,
+    zip_safe=True, # for kaldilm, use zip_safe=False,
 )
 
 setup(**setup_info)

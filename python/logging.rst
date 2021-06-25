@@ -148,3 +148,11 @@ The above code prints the following to the console::
   2021-04-12 11:18:52 WARNING:warning
 
 
+TODOs
+-----
+
+- `<https://fangpenlin.com/posts/2012/08/26/good-logging-practice-in-python/>`_
+
+    SpeechBrain is using this kind of techniques.
+
+    See `<https://github.com/speechbrain/speechbrain/blob/develop/speechbrain/utils/logger.py>`_
