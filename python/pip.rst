@@ -2,6 +2,10 @@
 Pip
 ===
 
+.. code-block:: bash
+
+   pip install  -e . # Install the current project in edit mode
+
 Package version
 ---------------
 

@@ -50,3 +50,7 @@ Python
   unicode
   setup
   argparse
+  json
+  datetime
+  collections
+  platform

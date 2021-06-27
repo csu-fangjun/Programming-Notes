@@ -66,3 +66,8 @@ Parameters:
 
 ``F.multi_head_attention_forward`` is defined
 at `<https://github.com/pytorch/pytorch/blob/master/torch/nn/functional.py#L4633>`_.
+
+.. literalinclude:: ./code/transformer/self-attention.py
+  :caption: code/transformer/self-attention.py
+  :language: python
+  :linenos:

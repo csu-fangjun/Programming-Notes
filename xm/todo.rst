@@ -10,6 +10,11 @@ TODOs
 
 - Read `<https://github.com/PyTorchLightning/pytorch-lightning>`_
 
+   Read `<https://github.com/PyTorchLightning/lightning-transformers>`_
+
+   Use `<https://github.com/PyTorchLightning/lightning_sphinx_theme>`_
+   for the documenation them of k2
+
 - Read `<https://github.com/OAID/Tengine>`_
 
 - Read `<https://google.github.io/eng-practices/review/reviewer/standard.html>`

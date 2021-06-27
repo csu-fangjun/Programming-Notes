@@ -2,13 +2,17 @@ setup
 =====
 
 
-
-.. literalinclude:: ./code/example_setup.py
-  :caption: code/example_setup.py
+.. literalinclude:: ./code/setup/example_setup.py
+  :caption: code/setup/example_setup.py
   :language: python
   :linenos:
 
-.. literalinclude:: ./code/example_setup2.py
-  :caption: code/example_setup2.py
+.. literalinclude:: ./code/setup/example_setup2.py
+  :caption: code/setup/example_setup2.py
+  :language: python
+  :linenos:
+
+.. literalinclude:: ./code/setup/test-tube.py
+  :caption: code/setup/test-tube.py
   :language: python
   :linenos:
