@@ -5,6 +5,7 @@ Kaldi
 .. toctree::
   :maxdepth: 1
 
+  useful_scripts
   data_preparation
   train_mono
   fbank

@@ -2,6 +2,21 @@
 TODOs
 =====
 
+- `pip install netron` for visualizing neural networks
+
+- Read `<https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`_
+
+- Read `<https://github.com/parlance/ctcdecode>`_
+
+    It implements ctc decoding with C++.
+
+    This pull request `<https://github.com/speechbrain/speechbrain/pull/773/files>`_
+    is also using it in SpeechBrain.
+
+- Read `<https://github.com/jwang0306/transformer-pytorch/blob/master/transformer.ipynb>`_
+
+  It implements both ``pre-LN`` and ``post-LN``.
+
 - Read `<https://github.com/google/sentencepiece/blob/master/python/test/sentencepiece_test.py>`_
 
 - Read `<https://distill.pub/2017/ctc/>`_

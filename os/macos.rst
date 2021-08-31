@@ -23,3 +23,11 @@ To disable some file:
 Run::
 
   sudo launchctl unload -w /System/Library/LaunchDaemons/file.plist
+
+
+If it complains `register-python-argcomplete` not found, run:
+
+.. code-block::
+
+  pip3 install --user bash-completion
+

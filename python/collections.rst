@@ -11,3 +11,11 @@ OrderedDict
   :caption: code/collections_test/ordered_dict_test.py
   :language: python
   :linenos:
+
+defaultdict
+-----------
+
+.. literalinclude:: ./code/collections_test/default_dict_test.py
+  :caption: code/collections_test/default_dict_test.py
+  :language: python
+  :linenos:
