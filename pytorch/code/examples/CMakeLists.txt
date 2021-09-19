@@ -32,12 +32,13 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
 
 
 add_library(hello SHARED
-  device.cc
-  # cuda.cc
-  # hello.cc
-  intrusive_ptr_test.cc
-  # tensor.cc
   array_ref_test.cc
+  cuda.cc
+  device.cc
+  hello.cc
+  intrusive_ptr_test.cc
+  scalar_type.cc
+  tensor.cc
   )
 set_property(TARGET hello PROPERTY CXX_STANDARD 14)
 

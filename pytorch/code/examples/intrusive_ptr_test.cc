@@ -123,7 +123,7 @@ void test_weak_intrusive_ptr() {
 
 } // namespace
 
-void Testintrusive_ptr() {
+void test_intrusive_ptr() {
   test_intrusive_ptr_impl();
   test_weak_intrusive_ptr();
 }

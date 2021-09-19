@@ -72,7 +72,7 @@ static void TestDeviceImpl() {
   }
 }
 
-void TestDevice() {
+void test_device() {
   //
   TestDeviceImpl();
   // TestDeviceType();

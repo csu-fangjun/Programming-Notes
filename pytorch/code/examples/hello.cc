@@ -190,26 +190,6 @@ static void test_data_ptr() {
   }
 }
 
-static void test_scalar_type() {
-  assert(torch::elementSize(torch::kBool) == sizeof(bool));
-  assert(torch::elementSize(torch::kByte) == sizeof(uint8_t));
-  assert(torch::elementSize(torch::kChar) == sizeof(int8_t));
-  assert(torch::elementSize(torch::kShort) == sizeof(int16_t));
-  assert(torch::elementSize(torch::kInt) == sizeof(int));
-  assert(torch::elementSize(torch::kLong) == sizeof(int64_t));
-  assert(torch::elementSize(torch::kFloat) == sizeof(float));
-  assert(torch::elementSize(torch::kDouble) == sizeof(double));
-
-  assert(torch::toString(torch::kBool) == std::string("Bool"));
-  assert(torch::toString(torch::kByte) == std::string("Byte"));
-  assert(torch::toString(torch::kChar) == std::string("Char"));
-  assert(torch::toString(torch::kShort) == std::string("Short"));
-  assert(torch::toString(torch::kInt) == std::string("Int"));
-  assert(torch::toString(torch::kLong) == std::string("Long"));
-  assert(torch::toString(torch::kFloat) == std::string("Float"));
-  assert(torch::toString(torch::kDouble) == std::string("Double"));
-}
-
 static void test_scalar() {
   {
     torch::Scalar scalar;
@@ -262,7 +242,6 @@ void test_hello() {
   // test_int_array_ref();
 
   // test_scalar();
-  // test_scalar_type();
   // test_data_ptr();
   // test_device_type();
   // test_accessor();
