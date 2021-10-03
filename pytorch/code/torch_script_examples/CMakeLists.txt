@@ -31,34 +31,12 @@ find_package(Torch REQUIRED)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
 
 
-add_library(hello SHARED
-  allocator.cc
-  array_ref_test.cc
-  cuda.cc
-  device.cc
-  device_type.cc
-  hello.cc
-  intrusive_ptr_test.cc
-  ivalue.cc
-  optional.cc
-  scalar_type.cc
-  storage_impl.cc
-  tensor.cc
-  tensor_options.cc
-  type_meta.cc
-  )
-set_property(TARGET hello PROPERTY CXX_STANDARD 14)
-
-target_include_directories(hello PUBLIC
-  ${TORCH_INCLUDE_DIRS}
-  ${PYTHON_INCLUDE_DIRS}
-)
-target_compile_options(hello PUBLIC
-  ${TORCH_CXX_FLAGS}
-  -DTORCH_EXTENSION_NAME=hello
-  -DTORCH_API_INCLUDE_EXTENSION_H
-)
-target_link_libraries(hello PUBLIC ${TORCH_LIBRARIES})
-
 add_executable(main main.cc)
-target_link_libraries(main hello)
+set_property(TARGET main PROPERTY CXX_STANDARD 14)
+target_link_libraries(main PRIVATE ${TORCH_LIBRARIES})
+
+# target_include_directories(main PRIVATE
+#   ${TORCH_INCLUDE_DIRS}
+#   ${PYTHON_INCLUDE_DIRS}
+# )
+

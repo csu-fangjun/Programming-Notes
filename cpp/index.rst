@@ -34,4 +34,5 @@ C++ Programming
   ebo
   gdb
   tmux
+  new
 

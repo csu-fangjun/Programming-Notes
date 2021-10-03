@@ -93,13 +93,12 @@ static void test_ref() {
 }
 
 static void test_device_type() {
-  static_assert(sizeof(torch::kCPU) == sizeof(int16_t), "");
-  static_assert(sizeof(torch::kCUDA) == sizeof(int16_t), "");
+  static_assert(sizeof(torch::kCPU) == sizeof(int8_t), "");
+  static_assert(sizeof(torch::kCUDA) == sizeof(int8_t), "");
 }
 
 static void test_device() {
-  static_assert(sizeof(torch::Device) == (sizeof(int16_t) + sizeof(int16_t)),
-                "");
+  static_assert(sizeof(torch::Device) == (sizeof(int8_t) + sizeof(int8_t)), "");
 
   static_assert(sizeof(torch::Device) ==
                     (sizeof(torch::DeviceType) + sizeof(torch::DeviceIndex)),

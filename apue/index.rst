@@ -9,3 +9,5 @@ Advanced Programming in Unix Environment
   file_io
   references
   pipe
+  fd_set
+  select

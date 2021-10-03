@@ -7,11 +7,21 @@ namespace {
 // c10::intrusive_ptr_target contains
 //  std::atomic<size_t> refcount;
 //  std::atomic<size_t> weakcount;
-//  and a virtual table pointer.
+//  and a virtual table pointer (since it has a virtual destructor)
+//
+// When it is copied or assigned, its refcount is not copied.
+//
+// If we want to use intrusive_ptr<T> then T must be a subclass of
+// intrusive_ptr_target
+//
+// intrusive_ptr<T> supports copy, move
+//
 static_assert(sizeof(std::atomic<size_t>) == 8, "");
 static_assert(
     sizeof(c10::intrusive_ptr_target) == 16 + 8,
     "It should contain only two std::atomic<size_t> members plus a vptr");
+static_assert(alignof(c10::intrusive_ptr_target) == 8, "");
+
 class Foo : public c10::intrusive_ptr_target {
 public:
   Foo(int i) : a_(i) {}
@@ -22,7 +32,10 @@ private:
   int a_;
 };
 
+static_assert(alignof(Foo) == 8, "");
+
 // +8 because there are 4-bytes for padding
+//
 static_assert(sizeof(Foo) == sizeof(c10::intrusive_ptr_target) + 8);
 
 void test_intrusive_ptr_impl() {
@@ -87,6 +100,12 @@ void test_intrusive_ptr_impl() {
     foo = std::move(baz); // move assignment
     assert(foo.use_count() == 1);
     assert(baz.use_count() == 0);
+  }
+
+  {
+    // we can create an empty intrusive_ptr<Foo>
+    c10::intrusive_ptr<Foo> p;
+    assert(p.use_count() == 0);
   }
 }
 

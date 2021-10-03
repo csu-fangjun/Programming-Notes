@@ -3,7 +3,7 @@
         "algorithms/set": [
             "briggs1993efficient"
         ],
-        "deep_learning/normalization": [
+        "deep_learning/layers": [
             "salimans2016weight"
         ],
         "deep_learning/quantization": [
@@ -36,6 +36,14 @@
         ],
         "tts/speech-separation": [
             "pariente2020asteroid"
+        ],
+        "xm/paper_reading": [
+            "schuster2012japanese",
+            "chan2015listen",
+            "sutskever2014sequence",
+            "bahdanau2014neural",
+            "luong2015effective",
+            "cho2014learning"
         ]
     }
 }

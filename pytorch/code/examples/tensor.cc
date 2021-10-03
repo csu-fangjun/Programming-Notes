@@ -19,8 +19,10 @@ static void test_tensor_size() {
 }
 
 static void test_tensor_impl() {
-  static_assert(sizeof(c10::TensorImpl) == 248,
-                "it should contain 31 * sizeof(int64_t)");
+  // for torch < 1.8.0
+  // static_assert(sizeof(c10::TensorImpl) == 248,
+  //               "it should contain 31 * sizeof(int64_t)");
+  //
   // Storagge storage_;
   // int64_t storage_offset_ = 0;  // number of elements, NOT number of bytes
   // int64_t numel_ = 1;

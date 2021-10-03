@@ -54,7 +54,6 @@ It is thread safe.
 
 Examples:
 
-
 .. literalinclude:: ./code/errno-test.c
   :caption: errno-test.c
   :language: cpp

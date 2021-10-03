@@ -13,37 +13,39 @@ number of devices is 127.
 A Device contains `DeviceIndex` and `DeviceType`.
 
 If the device type is cpu, the device index has to be -1 or 0.
+
+If the device type is CUDA, then a negative index means to use
+the current device.
+
+It method `str()` can return a string representation of the device,
+e.g., "cpu", "cuda:0".
+
+We can construct a device from its string representation.
+
+The following methods are useful:
+
+  - type()
+  - index()
+  - is_cpu()
+  - is_cuda()
+  - str()
+
+Note: we can use "os << device;"
  */
 
-static void TestDeviceType() {
-  // DeviceType is defined in namespace c10, but
-  // it is exported to the namespace torch.
-  torch::DeviceType device_type = torch::kCPU;
-  std::string upper =
-      torch::DeviceTypeName(device_type); // convert kCPU to a string
-  std::string lower = torch::DeviceTypeName(device_type, true);
-  std::cout << "device type: " << upper << "\n";
-  std::cout << "device type: " << lower << "\n";
-  std::cout << "device type: " << torch::kCPU << "\n"; // print kCPU directly
-  /*
-  device type: CPU
-  device type: cpu
-  device type: cpu
-   */
-}
-
-static void TestDeviceImpl() {
+static void test() {
   {
-    std::cout << sizeof(torch::DeviceType) << "\n";  // 2
-    std::cout << sizeof(c10::DeviceType) << "\n";    // 2
-    std::cout << sizeof(torch::DeviceIndex) << "\n"; // 2
-    std::cout << sizeof(torch::Device) << "\n";      // 4
+    static_assert(sizeof(torch::DeviceType) == 1, "");
+    static_assert(sizeof(torch::DeviceIndex) == 1, "");
+    static_assert(sizeof(torch::Device) == 2, "");
+    // for torch < 1.8.0
+    // static_assert(sizeof(torch::DeviceType) == 2, "");
+    // static_assert(sizeof(torch::DeviceIndex) == 2, "");
+    // static_assert(sizeof(torch::Device) == 4, "");
   }
   {
     torch::Device device("cpu");
-    std::cout << device << "\n"; // cpu
-    std::string s = device.str();
-    std::cout << s << "\n"; // cpu
+    assert(device.str() == "cpu");
 
     assert(device.is_cpu() == true);
     assert(device.type() == torch::kCPU);
@@ -51,9 +53,7 @@ static void TestDeviceImpl() {
   }
   {
     torch::Device device("cuda:1");
-    std::cout << device << "\n"; // cuda:1
-    std::string s = device.str();
-    std::cout << s << "\n"; // cuda:1
+    assert(device.str() == "cuda:1");
 
     assert(device.is_cuda() == true);
     assert(device.type() == torch::kCUDA);
@@ -62,9 +62,7 @@ static void TestDeviceImpl() {
 
   {
     torch::Device device(torch::kCUDA, 3);
-    std::cout << device << "\n"; // cuda:3
-    std::string s = device.str();
-    std::cout << s << "\n"; // cuda:3
+    assert(device.str() == "cuda:3");
 
     assert(device.is_cuda() == true);
     assert(device.type() == torch::kCUDA);
@@ -72,8 +70,4 @@ static void TestDeviceImpl() {
   }
 }
 
-void test_device() {
-  //
-  TestDeviceImpl();
-  // TestDeviceType();
-}
+void test_device() { test(); }
