@@ -18,3 +18,4 @@ Git
   gerrit
   remote
   tag
+  lfs

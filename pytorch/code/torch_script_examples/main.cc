@@ -2,6 +2,9 @@
 
 // see torch/csrc/jit/api/module.h
 // torch/csrc/jit/api/*.h
+//
+// This example show how to load a saved scripted module
+// and run its forward() and an exported method.
 
 void test() {
   std::string filename = "../foo.pt";
