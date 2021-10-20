@@ -4,6 +4,8 @@ git lfs
 See `<https://www.atlassian.com/git/tutorials/git-lfs>`_
 for more documentation.
 
+See also `<https://sabicalija.github.io/git-lfs-intro/>`_.
+
 Installation
 ------------
 
@@ -70,6 +72,62 @@ the repo, it creates the following files in ``.git/hooks``:
   #!/bin/sh
   command -v git-lfs >/dev/null 2>&1 || { echo >&2 "\nThis repository is configured for Git LFS but 'git-lfs' was not found on your path. If you no longer wish to use Git LFS, remove this hook by deleting .git/hooks/post-checkout.\n"; exit 2; }
   git lfs post-checkout "$@"
+
+
+By default, run ``git lfs install`` and then run ``git clone``, it will download
+LFS files from the remote server.
+
+Use ``git lfs install --skip-smudge`` to disable that behavior.
+
+We can also use ``git lfs install --local --skip-smudge``.
+
+
+``git lfs install --local --skip-smudge`` makes the following changes:
+
+.. code-block::
+
+  .git/config       filter.lfs.smudge=git-lfs smudge --skip — %f
+  .git/config       filter.lfs.process=git-lfs filter-process --skip
+  .git/config       filter.lfs.required=true
+  .git/config       filter.lfs.clean=git-lfs clean — %f
+
+
+To pull single LFS tracked file, use:
+
+.. code-block:: bash
+
+  git lfs pull --include=filename
+
+  # Both of them are OK
+  git lfs pull --include="Linv.pt"
+  git lfs pull --include="./data/lang_bpe_500/Linv.pt"
+
+To pull all LFS files, use: ``git lfs pull``.
+
+Before downloading ``L.pt``, its content is:
+
+.. code-block::
+
+  $ cat L.pt
+  version https://git-lfs.github.com/spec/v1
+  oid sha256:0b8c4d3be529e6436db51f0d65c3d5423a36a4bac58b5f2764f553255502f9e1
+  size 19025793
+
+After using ``git lfs pull --include=L.pt``:
+
+.. code-block::
+
+  $ git lfs pull --include=L.pt
+  Git LFS: (1 of 1 files) 18.14 MB / 18.14 MB
+
+.. code-block::
+
+  $ git lfs pointer --file=L.pt
+  Git LFS pointer for L.pt
+
+  version https://git-lfs.github.com/spec/v1
+  oid sha256:0b8c4d3be529e6436db51f0d65c3d5423a36a4bac58b5f2764f553255502f9e1
+  size 19025793
 
 
 git lfs track
