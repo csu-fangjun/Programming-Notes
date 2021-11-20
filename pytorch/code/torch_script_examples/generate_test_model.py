@@ -4,17 +4,6 @@ from typing import Final
 
 
 class Foo(torch.nn.Module):
-    #  __constants__ = ["i", "s", "f"]
-    i: int
-    s: str
-    f: float
-    #
-    #  i: Final[int]
-    #  s: Final[str]
-    #  f: Final[float]
-    #
-    k: int
-
     def __init__(self):
         super().__init__()
         self.i = 10

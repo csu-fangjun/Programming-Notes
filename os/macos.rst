@@ -31,3 +31,10 @@ If it complains `register-python-argcomplete` not found, run:
 
   pip3 install --user bash-completion
 
+
+To show input hint for Chinese input, run:
+
+.. code-block::
+
+  pkill -f SCIM.app
+

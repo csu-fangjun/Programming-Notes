@@ -6,6 +6,8 @@ for more documentation.
 
 See also `<https://sabicalija.github.io/git-lfs-intro/>`_.
 
+See also `<https://github.com/git-lfs/git-lfs/wiki/Tutorial>`_
+
 Installation
 ------------
 
@@ -78,6 +80,7 @@ By default, run ``git lfs install`` and then run ``git clone``, it will download
 LFS files from the remote server.
 
 Use ``git lfs install --skip-smudge`` to disable that behavior.
+Or set the environment variable `GIT_LFS_SKIP_SMUDGE=1`
 
 We can also use ``git lfs install --local --skip-smudge``.
 
@@ -137,8 +140,14 @@ To add a file to ``git lfs``, use:
 
 .. code-block::
 
-  git lfs track xxx.foo
+  git lfs track '*.foo'
   git add xxx.foo
+
+To track a directory, use:
+
+.. code-block::
+
+  git lfs track "foo/**"
 
 
 Note: ``git lfs track "*.png"`` will create a file ``.gitattributes`` in the directory
@@ -165,7 +174,11 @@ To download all git lfs histories, use:
 
 .. code-block::
 
+  # Only download files for the latest commit
+  git lfs fetch
+
   # by default, recent means 7 days.
+  # Download all files on all branches that are commited within 7 days
   git lfs fetch --recent
 
   # to change recent to mean 10 days
@@ -173,6 +186,12 @@ To download all git lfs histories, use:
 
   # To fetch all LFS files
   git lfs fetch --all
+
+  # For a build that just runs the unit tests
+  git lfs fetch --exclude Assets/**
+
+  # For an audio engineer
+  git lfs fetch --include Assets/Audio/**
 
 
 git lfs prune
@@ -187,4 +206,28 @@ git lfs prune
   git lfs prune --dry-run --verbose
   git lfs prune --verify-remote
 
+git lfs ls-files
+----------------
 
+To view files tracked by git lfs, i.e., commited into LFS, use:
+
+.. code-block::
+
+  git lfs ls-files
+  # Not: git lfs track
+
+To view the patterns tracked by git lfs, use:
+
+.. code-block::
+
+  git lfs track
+  # It reads contents from files: .gitattributes
+
+git lfs env
+-----------
+
+.. code-block::
+
+  git lfs env
+  # It can show configs about LFS, e.g., those set by `git lfs install`.
+  # It can also show the endpoint for the LFS server

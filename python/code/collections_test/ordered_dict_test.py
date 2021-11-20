@@ -5,20 +5,20 @@ from collections import OrderedDict
 
 def main():
     d = OrderedDict()
-    d['a'] = 10
-    d['c'] = 20
-    d['b'] = 30
+    d["a"] = 10
+    d["c"] = 20
+    d["b"] = 30
 
-    # The order of the key is determinied by the insertion order
-    assert list(d.keys()) == ['a', 'c', 'b']
+    # The order of the key is determined by the insertion order
+    assert list(d.keys()) == ["a", "c", "b"]
 
-    d.move_to_end('a')
-    assert list(d.keys()) == ['c', 'b', 'a']
+    d.move_to_end("a")
+    assert list(d.keys()) == ["c", "b", "a"]
 
     # re-assign the key 'c' does not change its order
-    d['c'] = 100
+    d["c"] = 100
 
-    assert list(d.keys()) == ['c', 'b', 'a']
+    assert list(d.keys()) == ["c", "b", "a"]
 
 
 # In PyTorch, nn.modules._module is an instance
@@ -26,5 +26,5 @@ def main():
 #
 # The dict is used by nn.Sequence()
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

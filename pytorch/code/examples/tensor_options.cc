@@ -7,6 +7,7 @@
 // layout, memory_format
 
 static void test() {
+#if 0
   torch::TensorOptions opt = torch::dtype(torch::kInt);
   // note: opt.dtype() is of type caffe2::TypeMeta
   assert(opt.dtype() == caffe2::TypeMeta::fromScalarType(torch::kInt));
@@ -24,6 +25,7 @@ static void test() {
 
   torch::TensorOptions opt6 = torch::requires_grad(true);
   opt6 = opt5.requires_grad(false);
+#endif
 }
 
 void test_tensor_options() { test(); }

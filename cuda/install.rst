@@ -7,6 +7,19 @@ Installation
     --silent \
     --extract=/root/fangjun/software/cuda-10.1.243
 
+Install cuda 11.3.0:
+
+.. code-block::
+
+  ./cuda_11.3.0_465.19.01_linux.run \
+    --silent \
+    --toolkit \
+    --samples \
+    --no-drm \
+    --no-man-page \
+    --no-opengl-libs \
+    --installpath=/ceph-fj/fangjun/software/cuda-11.3.0
+
 
 
 To install cudnn,

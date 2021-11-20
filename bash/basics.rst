@@ -87,6 +87,11 @@ Get the number of lines in a file.
 
   cat file | wc -l
   wc -l < file
+  help_message=$(cat << EOF
+    hello
+    world
+  EOF
+  )
 
 Note that ``wc -l file`` prints two columns. The second column is the filename.
 

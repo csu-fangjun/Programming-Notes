@@ -62,10 +62,22 @@ static void test_type_meta() {
   assert(t1.name() == std::string("int"));
 }
 
+static void test_index() {
+  torch::Tensor a = torch::arange(8).reshape({2, 4});
+  torch::Tensor b = a.index({"...", -1});
+  std::cout << a;
+  std::cout << b;
+  torch::Tensor c = torch::arange(2);
+  b.copy_(c);
+  std::cout << "\nafter copying\n";
+  std::cout << a;
+  std::cout << b;
+}
+
 void test_tensor() {
-  // test_type_meta();
-  // test_dispatch_key_set();
+  test_type_meta();
+  test_dispatch_key_set();
   test_tensor_size();
-  // test_tensor_impl();
-  //
+  test_tensor_impl();
+  test_index();
 }

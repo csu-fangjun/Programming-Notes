@@ -17,6 +17,8 @@ int main() {
   std::vector<int> v(n);
   int *d;
   cudaError_t ret = cudaMalloc(&d, sizeof(int) * n);
+
+  // this statement can be removed since it copies all 0s from v to d
   ret = cudaMemcpy(d, v.data(), sizeof(int) * n, cudaMemcpyHostToDevice);
 
   // inside the kernel,

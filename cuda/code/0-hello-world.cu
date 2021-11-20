@@ -1,10 +1,12 @@
 #include <stdio.h>
 
-__global__ void hello_world() {
-  printf("hello world\n");
-}
+// __global__ means it can be called from either host or device
+//
+// It is always run on device
+__global__ void hello_world() { printf("hello world\n"); }
 
 int main() {
+  // <<<num_blocks, threads_per_block>>>
   hello_world<<<1, 1>>>();
 
   // the printf function in the kernel prints things

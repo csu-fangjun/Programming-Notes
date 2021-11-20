@@ -55,3 +55,6 @@ Python
   collections
   platform
   pdb
+  metaclass
+  new
+  super

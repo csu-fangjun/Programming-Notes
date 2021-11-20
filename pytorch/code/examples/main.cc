@@ -20,5 +20,7 @@ int main() {
   TEST(allocator);
   TEST(storage_impl);
   TEST(ivalue);
+  TEST(qualified_name);
+  TEST(custom_class);
   return 0;
 }

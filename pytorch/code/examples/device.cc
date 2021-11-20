@@ -35,9 +35,11 @@ Note: we can use "os << device;"
 
 static void test() {
   {
+#if 0
     static_assert(sizeof(torch::DeviceType) == 1, "");
     static_assert(sizeof(torch::DeviceIndex) == 1, "");
     static_assert(sizeof(torch::Device) == 2, "");
+#endif
     // for torch < 1.8.0
     // static_assert(sizeof(torch::DeviceType) == 2, "");
     // static_assert(sizeof(torch::DeviceIndex) == 2, "");

@@ -10,7 +10,7 @@ IDs
   ``threadIdx.x`` is ``blockDim.x - 1``
 
 - ``blockIdx.x``, ``blockIdx.y``, ``blockIdx.z``. Maximum ``blockIdx.x``
-  is ``gridDim.x``.
+  is ``gridDim.x - 1``.
 
 There is no ``threadDim``!!!
 
