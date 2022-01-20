@@ -88,6 +88,24 @@ dvisvgm
 See `<https://man.archlinux.org/man/extra/texlive-bin/dvisvgm.1.en>`_
 for available options.
 
+If it throws the following warning:
+
+.. code-block::
+
+  processing of PostScript specials is disabled (Ghostscript not found)
+  pre-processing DVI file (format version 2)
+  processing page 1
+    WARNING: 707 PostScript specials ignored. The resulting SVG might look wrong.
+    graphic size: 222.841406pt x 13.14013pt (78.319797mm x 4.618228mm)
+    output written to pic.svg
+  1 of 1 page converted in 0.364417 seconds
+
+then we have to use:
+
+.. code-block::
+
+  dvisvgm --libgs=/usr/local/Cellar/ghostscript/9.55.0/lib/libgs.dylib pic.dvi  --no-fonts pic.svg
+
 Basics
 ------
 
