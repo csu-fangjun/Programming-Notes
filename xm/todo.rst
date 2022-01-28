@@ -55,6 +55,8 @@ TODOs
 
     Speech Recognition EECS E6870 — Spring 2016
 
+    username: speech, password: pythonrules
+
 - Read `<http://ethen8181.github.io/machine-learning/>`_
 
   Especially `<http://ethen8181.github.io/machine-learning/clustering/GMM/GMM.html>`_
