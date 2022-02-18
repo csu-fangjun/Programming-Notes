@@ -10,3 +10,4 @@ ssh is used for remote logging and copying files.
     v2ray
     port_forward
     trojan
+    ec2

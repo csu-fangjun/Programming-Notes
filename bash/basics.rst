@@ -129,7 +129,7 @@ Add a user with a specified user id.
 
 .. code-block::
 
-  sudo adduser <username> --uid <user_id>
+  sudo adduser <username> --uid <user_id> --gid <group_id> --home <DIR>
 
 This command can be executed in docker.
 

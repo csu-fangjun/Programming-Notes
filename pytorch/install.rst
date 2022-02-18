@@ -35,3 +35,8 @@ after using ``python setup.py develop``:
 
 It creats a link from ``envs/py37/lib/python3.8/site-packages/torch.egg-link``
 to ``open-source/pytorch``.
+
+nightly wheels
+--------------
+
+`<https://download.pytorch.org/whl/nightly/torch_nightly.html>`_

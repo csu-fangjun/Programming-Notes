@@ -7,7 +7,7 @@ import torch.nn as nn
 
 
 @torch.no_grad()
-def test_rnn():
+def test_rnn1():
     input_size = 20
     hidden_size = 50
     w_ih = np.random.rand(hidden_size, input_size).astype(np.float32)
@@ -41,20 +41,22 @@ def test_rnn():
     y = np.stack(y_list)
 
     old_h = np.expand_dims(old_h, axis=0)
-    rnn = nn.RNN(input_size=input_size,
-                 hidden_size=hidden_size,
-                 num_layers=1,
-                 nonlinearity='tanh',
-                 bias=True,
-                 batch_first=False,
-                 dropout=0,
-                 bidirectional=False)
+    rnn = nn.RNN(
+        input_size=input_size,
+        hidden_size=hidden_size,
+        num_layers=1,
+        nonlinearity="tanh",
+        bias=True,
+        batch_first=False,
+        dropout=0,
+        bidirectional=False,
+    )
 
     state_dict = rnn.state_dict()
-    state_dict['weight_ih_l0'] = torch.from_numpy(w_ih)
-    state_dict['weight_hh_l0'] = torch.from_numpy(w_hh)
-    state_dict['bias_ih_l0'] = torch.from_numpy(bias_ih).squeeze()
-    state_dict['bias_hh_l0'] = torch.from_numpy(bias_hh).squeeze()
+    state_dict["weight_ih_l0"] = torch.from_numpy(w_ih)
+    state_dict["weight_hh_l0"] = torch.from_numpy(w_hh)
+    state_dict["bias_ih_l0"] = torch.from_numpy(bias_ih).squeeze()
+    state_dict["bias_hh_l0"] = torch.from_numpy(bias_hh).squeeze()
     rnn.load_state_dict(state_dict)
     out_y, out_h = rnn(torch.from_numpy(in_data), torch.from_numpy(old_h))
     torch.testing.assert_allclose(out_y.numpy(), y)
@@ -115,25 +117,27 @@ def test_birnn():
 
     y = np.concatenate([y, y_reverse], axis=-1)
 
-    rnn = nn.RNN(input_size=input_size,
-                 hidden_size=hidden_size,
-                 num_layers=1,
-                 nonlinearity='tanh',
-                 bias=True,
-                 batch_first=False,
-                 dropout=0,
-                 bidirectional=True)
+    rnn = nn.RNN(
+        input_size=input_size,
+        hidden_size=hidden_size,
+        num_layers=1,
+        nonlinearity="tanh",
+        bias=True,
+        batch_first=False,
+        dropout=0,
+        bidirectional=True,
+    )
 
     state_dict = rnn.state_dict()
-    state_dict['weight_ih_l0'] = torch.from_numpy(w_ih)
-    state_dict['weight_hh_l0'] = torch.from_numpy(w_hh)
-    state_dict['bias_ih_l0'] = torch.from_numpy(b_ih)
-    state_dict['bias_hh_l0'] = torch.from_numpy(b_hh)
+    state_dict["weight_ih_l0"] = torch.from_numpy(w_ih)
+    state_dict["weight_hh_l0"] = torch.from_numpy(w_hh)
+    state_dict["bias_ih_l0"] = torch.from_numpy(b_ih)
+    state_dict["bias_hh_l0"] = torch.from_numpy(b_hh)
 
-    state_dict['weight_ih_l0_reverse'] = torch.from_numpy(w_ih_reverse)
-    state_dict['weight_hh_l0_reverse'] = torch.from_numpy(w_hh_reverse)
-    state_dict['bias_ih_l0_reverse'] = torch.from_numpy(b_ih_reverse).squeeze()
-    state_dict['bias_hh_l0_reverse'] = torch.from_numpy(b_hh_reverse).squeeze()
+    state_dict["weight_ih_l0_reverse"] = torch.from_numpy(w_ih_reverse)
+    state_dict["weight_hh_l0_reverse"] = torch.from_numpy(w_hh_reverse)
+    state_dict["bias_ih_l0_reverse"] = torch.from_numpy(b_ih_reverse).squeeze()
+    state_dict["bias_hh_l0_reverse"] = torch.from_numpy(b_hh_reverse).squeeze()
 
     rnn.load_state_dict(state_dict)
 
@@ -145,7 +149,7 @@ def test_birnn():
     torch.testing.assert_allclose(out_h[1], torch.from_numpy(h[1][0]))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     np.random.seed(20200807)
     test_rnn()
     test_birnn()

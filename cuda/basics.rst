@@ -12,7 +12,7 @@ IDs
 - ``blockIdx.x``, ``blockIdx.y``, ``blockIdx.z``. Maximum ``blockIdx.x``
   is ``gridDim.x - 1``.
 
-There is no ``threadDim``!!!
+There is no ``threadDim``!!! Also, there is no ``gridIdx``.
 
 For the maximum value of ``gridDim.x``, ``blockDim.x``, refer to
 ``Table 15. Technical Specifications per Compute Capability``
