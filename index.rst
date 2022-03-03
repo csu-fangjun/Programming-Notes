@@ -52,6 +52,8 @@ Refer to :ref:`sphinx_install` page for how to build this website.
    rpc/index
    security/index
    german/index
+   dataset/index
+   hotword/index
 
 Books
 =====
