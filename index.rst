@@ -49,6 +49,7 @@ Refer to :ref:`sphinx_install` page for how to build this website.
    books/index
    tensorflow/index
    compilers/index
+   llvm/index
    rpc/index
    security/index
    german/index

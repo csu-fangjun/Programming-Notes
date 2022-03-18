@@ -10,6 +10,8 @@ Refer to `<https://www.tug.org/texlive/acquire-iso.html>`_ to download it.
 
   wget https://mirrors.aliyun.com/CTAN/systems/texlive/Images/texlive2020-20200406.iso
   mount -t iso9660 -o ro,loop,noauto /your/texlive.iso /some/local/path
+  # Or got to https://mirror.bjtu.edu.cn/CTAN/systems/texlive/Images/
+  #  wget https://mirror.bjtu.edu.cn/CTAN/systems/texlive/Images/texlive2021-20210325.iso
 
 Refer to `<https://www.tug.org/texlive/quickinstall.html>`_ for installation.
 
@@ -18,7 +20,9 @@ If we do not have root permission, use:
 .. code-block::
 
   sudo apt-get install p7zip-full
-  7z x ./path/to/texlive.iso
+  mkdir my-texlive
+  cd my-texlive
+  7z x /path/to/texlive.iso
 
 After extraction, run:
 
