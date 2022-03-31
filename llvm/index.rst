@@ -7,4 +7,5 @@ LLVM
 
   install
   ninja
+  doc
 
