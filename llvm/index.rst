@@ -8,4 +8,5 @@ LLVM
   install
   ninja
   doc
+  ir
 
