@@ -11,3 +11,4 @@ ssh is used for remote logging and copying files.
     port_forward
     trojan
     ec2
+    windows
